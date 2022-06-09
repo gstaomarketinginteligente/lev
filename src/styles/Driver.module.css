@@ -1,0 +1,365 @@
+.container .mainContent {
+  width: 100vw;
+  height: 100vh;
+  padding: 0 0 0 15vw;
+  background-image: url(../images/blueBg.svg);
+  background-size: cover;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 39vw 33vw;
+      grid-template-columns: 39vw 33vw;
+  -ms-grid-rows: 100%;
+      grid-template-rows: 100%;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.container .mainContent article {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.container .mainContent article h1 {
+  font-weight: 700;
+  font-size: 4rem;
+  line-height: 5rem;
+  color: var(--white);
+}
+
+.container .mainContent article h2 {
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 130%;
+  letter-spacing: 0.05em;
+  color: var(--blue);
+  background-color: var(--white);
+  border-radius: 2rem;
+  padding: 0 3rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.container .mainContent article p {
+  font-weight: 400;
+  font-size: 2.4rem;
+  line-height: 130%;
+  letter-spacing: 0.05em;
+  color: var(--white);
+}
+
+.container .mainContent article button {
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 150%;
+  margin-top: 3rem;
+  padding: 0.8rem 3rem;
+  border: none;
+  border-radius: 3rem;
+  background-color: transparent;
+  color: var(--white);
+  border: 2px solid var(--white);
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.container .mainContent article button:active {
+  -webkit-transform: scale(0.97);
+          transform: scale(0.97);
+}
+
+.tip {
+  position: absolute;
+  top: 97%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.benefitsTitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 20vh;
+  margin-bottom: 10vh;
+}
+
+.benefitsTitle h1 {
+  font-weight: 700;
+  font-size: 4.8rem;
+  line-height: 5.5rem;
+  text-align: center;
+  color: var(--orange);
+}
+
+.cardsContainer {
+  width: 100vw;
+  padding: 0 15vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 2rem;
+  margin-bottom: 20vh;
+}
+
+.letterSection {
+  position: relative;
+  width: 100%;
+  padding: 20vh 45vw 30vh 15vw;
+  z-index: 0;
+}
+
+.letterSection::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-clip-path: polygon(100% 0, 100% 80%, 50% 100%, 0 80%, 0 0);
+          clip-path: polygon(100% 0, 100% 80%, 50% 100%, 0 80%, 0 0);
+  background-image: url(../images/driver/frame.jpg);
+  background-size: cover;
+}
+
+.letterSection h1 {
+  font-weight: 700;
+  font-size: 6.4rem;
+  line-height: 7.4rem;
+  color: var(--white);
+  margin-bottom: 3rem;
+}
+
+.letterSection p {
+  font-weight: 500;
+  font-size: 2.4rem;
+  line-height: 130%;
+  letter-spacing: 0.05em;
+  color: var(--white);
+  margin-bottom: 3rem;
+}
+
+.letterSection button {
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 150%;
+  color: var(--white);
+  padding: 1rem 4rem;
+  background-color: transparent;
+  border: 2px solid var(--white);
+  border-radius: 3rem;
+}
+
+.letterSection img {
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  top: 100%;
+  left: 50%;
+  z-index: 5;
+}
+
+.calculatorSection {
+  background-image: url(../images/blueBg.svg);
+  background-size: cover;
+  width: 100vw;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-top: -25vh;
+  padding: 40vh 30vw 10vh;
+}
+
+.calculatorSection .head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 5rem;
+}
+
+.calculatorSection .head h1 {
+  font-weight: 700;
+  font-size: 4.8rem;
+  line-height: 5.5rem;
+  color: var(--white);
+  margin-bottom: 2rem;
+}
+
+.calculatorSection .head p {
+  font-weight: 400;
+  font-size: 2.4rem;
+  line-height: 130%;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-align: center;
+  color: var(--white);
+}
+
+.signinSection {
+  width: 100vw;
+  padding: 15vh 15vw;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff8f29), to(#e46d00));
+  background: linear-gradient(180deg, #ff8f29 0%, #e46d00 100%);
+  gap: 2rem;
+  margin-top: -1px;
+}
+
+.signinSection article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+}
+
+.signinSection article h1 {
+  font-weight: 700;
+  font-size: 4.8rem;
+  line-height: 5.5rem;
+  color: var(--white);
+  margin-bottom: 2rem;
+}
+
+.signinSection article p {
+  font-weight: 400;
+  font-size: 2.4rem;
+  line-height: 130%;
+  letter-spacing: 0.05em;
+  color: var(--white);
+}
+
+.signinSection form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+
+.signinSection form input {
+  width: 100%;
+  padding: 2rem 3rem;
+  border: none;
+  border-radius: 1rem;
+  color: var(--gray);
+}
+
+.signinSection form button {
+  margin-top: 1rem;
+  padding: 1.5rem 6rem;
+  background-color: transparent;
+  border: 2px solid var(--white);
+  border-radius: 4rem;
+  color: var(--white);
+  font-weight: 500;
+  font-size: 2.4rem;
+  line-height: 2.8rem;
+}
+
+@media only screen and (max-width: 1024px) {
+  .container .mainContent {
+    position: relative;
+    -ms-grid-columns: 100vw;
+        grid-template-columns: 100vw;
+    -ms-grid-rows: 60% 40%;
+        grid-template-rows: 60% 40%;
+    padding: 20vw 5vw 0 5vw;
+    padding-bottom: 20vh;
+    -webkit-box-sizing: content-box;
+            box-sizing: content-box;
+    width: 90vw;
+  }
+  .container .mainContent article {
+    width: 90vw;
+  }
+  .container .mainContent .personS {
+    -ms-grid-row: 1;
+    grid-row: 1;
+    margin-bottom: -8vh;
+    width: 90%;
+    -ms-grid-column-align: start;
+        justify-self: start;
+  }
+  .tip {
+    position: absolute;
+    top: 97%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  .letterSection {
+    padding: 20vh 5vw 30vh 5vw;
+  }
+  .letterSection::before {
+    -webkit-clip-path: polygon(100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);
+            clip-path: polygon(100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);
+  }
+  .letterSection h1 {
+    font-size: 3rem;
+    line-height: 4rem;
+  }
+  .calculatorSection {
+    padding: 40vh 5vw 10vh;
+  }
+  .calculatorSection .head h1 {
+    font-size: 3rem;
+    line-height: 4rem;
+  }
+  .calculatorSection .head p {
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+  .signinSection {
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+    -ms-grid-rows: 60% 40%;
+        grid-template-rows: 60% 40%;
+  }
+}
+/*# sourceMappingURL=Driver.module.css.map */

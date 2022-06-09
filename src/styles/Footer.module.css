@@ -1,0 +1,122 @@
+footer {
+  font-family: 'Ubuntu';
+  background-color: black;
+  color: white;
+  height: 50rem;
+  padding: 8rem 15vw 4rem 15vw;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 60% 40%;
+      grid-template-rows: 60% 40%;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-areas: 'logo contatos app seja' 'copyright . . social';
+  font-size: 1.8rem;
+}
+
+footer div {
+  width: 100%;
+}
+
+footer div p:not(:last-child) {
+  margin-bottom: 4rem;
+}
+
+footer div i {
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+footer div i:hover {
+  color: var(--orange);
+}
+
+footer div i:not(:last-child) {
+  margin-right: 3rem;
+}
+
+.footerSectionTitle {
+  color: var(--orange);
+  margin-bottom: 2.3rem;
+}
+
+.storeSection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.storeSection img {
+  width: 14.6rem;
+  cursor: pointer;
+}
+
+.storeSection img:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.lev {
+  border: 0.2rem solid var(--white);
+  border-radius: 3rem;
+  padding: 0.8rem 3.2rem;
+}
+
+.lev:hover {
+  color: var(--orange);
+  background-color: white;
+}
+
+.logo {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: logo;
+}
+
+.contatos {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: contatos;
+}
+
+.app {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: app;
+}
+
+.seja {
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
+  grid-area: seja;
+}
+
+.social {
+  -ms-grid-row: 2;
+  -ms-grid-column: 4;
+  grid-area: social;
+}
+
+.copyright {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: copyright;
+}
+
+@media only screen and (max-width: 1366px) {
+  footer {
+    padding: 8rem 5vw 4rem 5vw;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  footer {
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: 'logo contatos seja' 'copyright app social';
+  }
+}
+/*# sourceMappingURL=Footer.module.css.map */

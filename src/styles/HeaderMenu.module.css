@@ -1,0 +1,62 @@
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  z-index: 100;
+  height: 100vh;
+  width: 65vw;
+  margin-right: -5vw;
+  font-size: 12px;
+  background-color: var(--gray);
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+}
+
+.container.inactive {
+  margin-right: -160vw;
+}
+
+.container i {
+  font-size: 48px;
+  color: var(--white);
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  padding: 5vw 5vw 0 0;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+
+.container i:hover {
+  font-size: 52px;
+}
+
+.container i:active {
+  font-size: 44px;
+}
+
+.nav {
+  padding-top: 6em;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  gap: 3.75em !important;
+}
+
+.nav a {
+  font-size: 1.5em;
+  color: var(--white) !important;
+}
+
+.levMobile {
+  padding: .5em 1em;
+  font-size: 1.25em !important;
+  border: 2px solid var(--white) !important;
+}
+/*# sourceMappingURL=HeaderMenu.module.css.map */

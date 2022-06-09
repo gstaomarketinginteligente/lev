@@ -1,0 +1,81 @@
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  border-radius: 2rem;
+  width: 20vw;
+  padding: 2rem;
+  gap: 2rem;
+  background-color: var(--beige);
+  -webkit-box-shadow: 0 4px 4px 0 var(--drop-shadow);
+          box-shadow: 0 4px 4px 0 var(--drop-shadow);
+}
+
+.header {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 22% auto;
+      grid-template-columns: 22% auto;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.header h1 {
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 130%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding-left: 2rem;
+  height: 100%;
+  color: var(--orange);
+}
+
+.content {
+  display: -ms-grid;
+  display: grid;
+  min-height: 10rem;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  -ms-grid-columns: 0.5rem auto;
+      grid-template-columns: 0.5rem auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.content canvas {
+  width: 100%;
+  height: 100%;
+  border-radius: 2rem;
+  background-color: var(--orange);
+}
+
+.content p {
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 130%;
+  padding: 0 0 0 2.5rem;
+  color: var(--gray);
+}
+/*# sourceMappingURL=BenefitsCard.module.css.map */

@@ -1,0 +1,137 @@
+.button {
+  font-size: 2.4rem;
+  border: 0.2rem solid white;
+  border-radius: 3rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 1.5rem 4rem;
+}
+
+.whoMain h1 {
+  font-size: 6.4rem;
+}
+
+.whoMain h1,
+.section2Title {
+  font-weight: 700;
+}
+
+.whoMain p {
+  font-size: 2.4rem;
+  line-height: 3.1rem;
+}
+
+.mainSection {
+  min-height: 80vh;
+  padding: 5rem 15vw;
+  background: -webkit-gradient(linear, left top, left bottom, from(#2dc6ea), to(#2ba9c8));
+  background: linear-gradient(180deg, #2dc6ea 0%, #2ba9c8 100%);
+  mix-blend-mode: normal;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  color: white;
+}
+
+.section2 {
+  min-height: 50vh;
+  padding: 0 15vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.section2 p:nth-child(2) {
+  margin: 3rem 0 2rem;
+}
+
+.section2 p.section2Title {
+  color: var(--orange);
+  font-size: 3.2rem;
+  line-height: normal;
+}
+
+.section3 {
+  background: url("../images/who/section3bg.jpg") center/cover;
+  color: white;
+  min-height: 60vh;
+  padding: 0 42vw 0 15vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.section3 > p {
+  margin: 3rem 0;
+}
+
+.section4 {
+  min-height: 225vh;
+  padding: 0 15vw;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 10vw 1fr;
+      grid-template-rows: 10vw 1fr;
+}
+
+.section4 > h1 {
+  color: var(--orange);
+  font-size: 4.8rem;
+  line-height: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 10vw;
+}
+
+.section4 > h1 > img {
+  width: 4rem;
+  margin-right: 2rem;
+}
+
+.section4ContentWrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 15rem 1fr;
+      grid-template-columns: 15rem 1fr;
+}
+
+.section4ContentWrapper > img {
+  min-width: 10.45rem;
+  max-width: 10.45rem;
+}
+
+.section4Content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 67rem 0.7fr;
+      grid-template-columns: 67rem 0.7fr;
+  position: relative;
+}
+
+.section4Content > img {
+  position: absolute;
+  right: -23rem;
+}
+/*# sourceMappingURL=Who.module.css.map */

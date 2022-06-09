@@ -1,0 +1,147 @@
+.sectionMain {
+  height: 110vh;
+  padding: 0 15vw;
+}
+
+.sectionMain h1 {
+  font-size: 6.4rem;
+  font-weight: 700;
+}
+
+.sectionMain h2 {
+  font-size: 4.8rem;
+  font-weight: 700;
+}
+
+.sectionMain p {
+  font-size: 2.4rem;
+}
+
+.sectionMain {
+  background: -webkit-gradient(linear, left top, left bottom, from(#2dc6ea), to(#2ba9c8));
+  background: linear-gradient(180deg, #2dc6ea 0%, #2ba9c8 100%);
+  mix-blend-mode: lighten;
+  color: white;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+}
+
+.sectionMain h1 {
+  margin: 1.5rem 0 3rem;
+}
+
+.sectionMain h1 ~ p {
+  margin-bottom: 3rem;
+}
+
+.sectionMain > img {
+  width: 80rem;
+}
+
+.storeButtons a, .storeButtons img {
+  width: 18.3rem;
+}
+
+.storeButtons a:first-child {
+  margin-right: 2rem;
+}
+
+.sectionCards {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-color: white;
+  padding: 0 15vw;
+  gap: 4rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+  margin-bottom: 10vh;
+}
+
+.secCardsTitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 10rem;
+}
+
+.secCardsTitle img {
+  width: 4rem;
+  margin-bottom: 2rem;
+}
+
+.secCardsTitle h2 {
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--orange);
+}
+
+@media (max-width: 785px) {
+  .sectionCard {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 10rem;
+    padding: 0 2rem;
+    text-align: center;
+  }
+  .secCardsTitle {
+    text-align: center;
+    margin-bottom: 20rem;
+  }
+  .cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+  }
+  .cards > div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    overflow-x: hidden;
+  }
+  .cards > div input {
+    display: none;
+  }
+  .card {
+    background-color: #f1f1f1;
+    padding: 2rem;
+    border-radius: 2rem;
+    min-width: 80%;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  .card p {
+    font-size: unset;
+  }
+  .cardHeader img {
+    margin-right: 1rem;
+  }
+  .cardHeader h4 {
+    font-size: 3rem;
+    text-align: start;
+  }
+  .cardText {
+    text-align: start;
+    height: auto;
+  }
+}
+/*# sourceMappingURL=Passenger.module.css.map */

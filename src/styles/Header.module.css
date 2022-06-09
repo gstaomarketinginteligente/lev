@@ -1,0 +1,101 @@
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 15vw;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 80px;
+  position: fixed;
+  top: 0px;
+  left: 0;
+  width: 100vw;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  background-color: transparent;
+  z-index: 1000;
+  overflow: visible;
+}
+
+.container.active {
+  background-color: var(--white);
+}
+
+.container.active .lev {
+  border: 2px solid var(--blue);
+}
+
+.container.active a {
+  color: var(--blue);
+}
+
+.container canvas {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 90;
+  background-color: var(--black);
+  opacity: 0.7;
+}
+
+.container img {
+  cursor: pointer;
+}
+
+.container nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.container a {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 150%;
+  color: var(--white);
+  text-decoration: none;
+  margin: auto;
+}
+
+.lev {
+  border: 2px solid var(--white);
+  border-radius: 30px;
+  padding: 8px 32px;
+}
+
+.menu {
+  font-size: 48px;
+  color: var(--white);
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+
+.menu:hover {
+  font-size: 52px;
+}
+
+.menu:active {
+  font-size: 48px;
+}
+
+.menu.active {
+  color: var(--blue);
+}
+
+@media only screen and (max-width: 1366px) {
+  .container {
+    padding: 0 5vw;
+  }
+}
+/*# sourceMappingURL=Header.module.css.map */

@@ -1,0 +1,64 @@
+.container {
+  margin-top: 4rem;
+}
+
+.container hr {
+  border-top: 1px solid var(--black);
+}
+
+.questionContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  cursor: pointer;
+}
+
+.questionContainer h3 {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2.4rem;
+  line-height: 130%;
+  letter-spacing: 0.05em;
+  color: var(--gray);
+}
+
+.answerContainer p {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 130%;
+  letter-spacing: 0.05em;
+  margin-bottom: 3.2rem;
+  color: transparent;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  max-height: 0;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.answerContainer.active p {
+  color: var(--gray);
+  max-height: 12rem;
+}
+
+.chevron {
+  font-size: 2rem;
+  color: var(--black);
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.chevron.active {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+/*# sourceMappingURL=Faq.module.css.map */
