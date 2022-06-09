@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/lev/static/css/main.ae97e9da.css",
+    "main.css": "/lev/static/css/main.8aa779e5.css",
     "main.js": "/lev/static/js/main.62a60fac.js",
     "static/js/787.577e3d93.chunk.js": "/lev/static/js/787.577e3d93.chunk.js",
     "static/media/section3.jpg": "/lev/static/media/section3.c44dabf280ca88f85b5e.jpg",
@@ -14,8 +14,10 @@
     "static/media/personMobile.png": "/lev/static/media/personMobile.599cf36643f28b370733.png",
     "static/media/person2.png": "/lev/static/media/person2.7f0baa3b93af08c303ef.png",
     "static/media/celular-laranja.png": "/lev/static/media/celular-laranja.b06a1bca369767ce92b7.png",
+    "static/media/bootstrap-icons.woff?": "/lev/static/media/bootstrap-icons.7ff3ca6fa798de3f8ac2.woff",
     "static/media/frame.jpg": "/lev/static/media/frame.908851377bb3590d6b41.jpg",
     "static/media/section3bg.jpg": "/lev/static/media/section3bg.908851377bb3590d6b41.jpg",
+    "static/media/bootstrap-icons.woff2?": "/lev/static/media/bootstrap-icons.f2539a501be3a673de05.woff2",
     "static/media/single-phone.png": "/lev/static/media/single-phone.3e67e8b3f0e0f28b3241.png",
     "static/media/timeline.svg": "/lev/static/media/timeline.ca7922acfb892cbff4ca9f64eebfc26e.svg",
     "static/media/appstore-filled.svg": "/lev/static/media/appstore-filled.0c13e4b34b157363fcd8208fe99b150b.svg",
@@ -43,12 +45,12 @@
     "static/media/vLev.svg": "/lev/static/media/vLev.a094d4f124a1c8cdbd093823a623734f.svg",
     "static/media/logo-minimal.svg": "/lev/static/media/logo-minimal.847021eb24895f33d3fce5f18c37486e.svg",
     "static/media/close.svg": "/lev/static/media/close.1741f188e447c7be7c96e81a0a31ebfe.svg",
-    "main.ae97e9da.css.map": "/lev/static/css/main.ae97e9da.css.map",
+    "main.8aa779e5.css.map": "/lev/static/css/main.8aa779e5.css.map",
     "main.62a60fac.js.map": "/lev/static/js/main.62a60fac.js.map",
     "787.577e3d93.chunk.js.map": "/lev/static/js/787.577e3d93.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ae97e9da.css",
+    "static/css/main.8aa779e5.css",
     "static/js/main.62a60fac.js"
   ]
 }
