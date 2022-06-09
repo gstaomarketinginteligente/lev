@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styles from '../styles/Faq.module.css';
+import '../../node_modules/bootstrap-icons/font/bootstrap-icons.css';
 
 function Faq({ question, answer }) {
   const {

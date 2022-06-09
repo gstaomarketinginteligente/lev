@@ -1,4 +1,5 @@
 .firstSection {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -69,7 +70,7 @@
   font-size: 2.4rem;
   line-height: 130%;
   letter-spacing: 0.05em;
-  padding: .5rem 2rem;
+  padding: 0.5rem 2rem;
   margin-bottom: 16px;
   border-radius: 3rem;
   background-color: var(--white);
@@ -98,8 +99,11 @@
 }
 
 .tip {
-  padding-left: 5vw;
-  margin: 0 auto;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -98%);
+          transform: translate(-50%, -98%);
 }
 
 .secondSection {

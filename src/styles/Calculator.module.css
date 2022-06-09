@@ -1,110 +1,278 @@
-.container {
-  background-color: var(--white);
-  border-radius: 1.5rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
+/* ocultando "setas" do input Number  */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.calculatorsWrapper {
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  z-index: 1;
-  width: 40rem;
   margin: auto;
+  width: 100%;
+  color: white;
 }
 
-.container header {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.calculators {
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 2rem;
-  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
-.container header h1 {
-  font-weight: 700;
+.calculator {
+  min-width: 28.5rem;
+  box-shadow: rgba(90, 79, 79, 0.2) 0px 0.1rem 1.3rem 0.1rem;
+  border-radius: 1.5rem;
+}
+
+.calculator h4 {
   font-size: 1.8rem;
-  line-height: 2.1rem;
-  color: var(--gray);
+  font-weight: 700;
 }
 
-.container form {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.calculator:not(:last-child) {
+  margin-right: 2rem;
+}
+
+.btnCalculate {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 2.4rem;
+
+  color: white;
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 3rem;
+  transition: 0.2s;
+
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  padding: 0 2rem 2rem 2rem;
-  row-gap: 2rem;
-  background: inherit;
+  align-items: center;
+  justify-content: center;
+
+  line-height: 2;
+  padding: 0 4rem;
+  cursor: pointer;
 }
 
-.container form label {
-  width: 46%;
-  margin: 0 2%;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.8rem;
-  color: var(--gray);
+.btnCalculate:hover {
+  background-color: white;
+  color: var(--orange);
 }
 
-.container form input {
+.calculator.moby {
+  min-width: 43rem;
+}
+
+.moby .results {
+  color: black;
+}
+
+.a .image,
+.b .image {
+  width: 7rem;
+  height: 7rem;
+  border-radius: 1rem;
+}
+
+.a .image,
+.b .image,
+.moby .image {
+  margin-right: 2rem;
+}
+
+.moby .image {
+  display: flex;
+  align-items: center;
   width: 100%;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.8rem;
-  color: var(--gray);
-  padding: 2rem 1rem;
-  border: 1px solid var(--gray);
-  border-radius: 0.5rem;
 }
 
-.container article {
-  background-color: var(--blue);
+.moby .image h4 {
+  margin-left: 2rem;
+}
+
+.infoIcon {
+  cursor: pointer;
+  width: 4rem;
+  filter: brightness(0);
+  transition: 0.2s;
+}
+
+.infoIcon:hover {
+  filter: brightness(1);
+}
+
+.closeModal {
+  cursor: pointer;
+  filter: brightness(0);
+  transition: 0.2s;
+}
+
+.closeModal:hover {
+  filter: brightness(1);
+}
+
+.a .image {
+  background: black;
+}
+
+.b .image {
+  background: #ffd62c;
+}
+
+.calculatorHeader {
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.calculator label,
+.calculator p {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.calculator label {
+  margin-bottom: 1rem;
+}
+
+.inputAreas:not(:last-child) p {
+  margin-bottom: 3rem;
+}
+
+.calculator input {
+  height: 5rem;
+  border: 1px solid black;
+  border-radius: 5px;
+  text-indent: 2rem;
   width: 100%;
+}
+
+.inputAreas {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.inputArea {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.parameters {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  background: white;
+  color: black;
+  padding: 2rem;
+  border-radius: 15px 15px 0 0;
+}
+
+.results {
   border-radius: 0 0 15px 15px;
   padding: 2rem;
 }
 
-.container article p {
-  background-color: var(--white);
-  border: none;
-  border-radius: 1.5rem;
-  color: var(--gray);
-  padding: 1.5rem 1.5rem;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.8rem;
-  width: 100%;
-  margin-bottom: 1rem;
-  text-align: left;
+.results button {
+  margin: auto;
 }
 
-.container article p:last-child {
-  margin-bottom: 0;
+.a .results {
+  background: black;
+}
+
+.moby .results {
+  background: #2dc6ea;
+}
+
+.moby .parameters .consumo {
+  width: 100%;
+}
+
+.moby .parameters .inputAreas .inputArea:first-child {
+  margin-right: 1rem;
+}
+
+.b p {
+  color: black;
+}
+
+.b .results {
+  background: #ffd62c;
+}
+
+.calculator .results p {
+  margin: auto 0;
+}
+
+.calculator .results .inputAreas {
+  align-items: center;
+  height: 5rem;
+}
+
+.moby .results .inputAreas {
+  background: #29b5d4;
+  border-radius: 1.5rem;
+  margin-bottom: 1rem;
+  padding: 0 2rem;
+}
+
+.moby .results div {
+  color: white;
+}
+
+.moby .results div:last-of-type {
+  color: black;
+  background-color: white;
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+}
+
+.modalHeader h3 {
+  color: var(--orange);
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.titleSection {
+  font-weight: 700;
+}
+
+.infoSection:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.infoSection > p:last-child {
+  font-weight: 400;
+  margin-top: 0.5rem;
+}
+
+p.infoDescription {
+  font-weight: 400;
+  font-style: italic;
+  color: gray;
+}
+
+@media (max-width: 785px) {
+  .calculatorsWrapper {
+    overflow-x: scroll;
+  }
+
+  .calculators {
+    width: unset;
+  }
+
+  .calculators::-webkit-scrollbar {
+    display: none;
+  }
+
+  .calculators .calculator {
+    min-width: 35rem;
+  }
 }
 /*# sourceMappingURL=Calculator.module.css.map */
