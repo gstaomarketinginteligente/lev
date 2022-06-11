@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/lev/static/css/main.476857a4.css",
-    "main.js": "/lev/static/js/main.e6230945.js",
+    "main.css": "/lev/static/css/main.5bb0a1ce.css",
+    "main.js": "/lev/static/js/main.6ebf037c.js",
     "static/js/787.577e3d93.chunk.js": "/lev/static/js/787.577e3d93.chunk.js",
     "static/media/section3.jpg": "/lev/static/media/section3.c44dabf280ca88f85b5e.jpg",
     "static/media/car.png": "/lev/static/media/car.066a8947eeac1e409b3c.png",
-    "static/media/person1.png": "/lev/static/media/person1.7e8ec75ffa4502667e37.png",
     "static/media/dual-phones.png": "/lev/static/media/dual-phones.0c35ae496faa2d086849.png",
+    "static/media/2.png": "/lev/static/media/2.2ba004f3878aab4eacf8.png",
     "static/media/section4.jpg": "/lev/static/media/section4.32520b341920e5f72028.jpg",
+    "static/media/3.png": "/lev/static/media/3.cebd56a57dd3ad0cad1c.png",
     "static/media/person.png": "/lev/static/media/person.1a70011a6bbf3ebe059a.png",
-    "static/media/person3.png": "/lev/static/media/person3.7728c433b4e7ca3490ff.png",
+    "static/media/1.png": "/lev/static/media/1.9a0422b0a75685e06933.png",
     "static/media/celular-azul.png": "/lev/static/media/celular-azul.2d8169cd04bc5f8d1d97.png",
     "static/media/personMobile.png": "/lev/static/media/personMobile.599cf36643f28b370733.png",
-    "static/media/person2.png": "/lev/static/media/person2.7f0baa3b93af08c303ef.png",
     "static/media/celular-laranja.png": "/lev/static/media/celular-laranja.b06a1bca369767ce92b7.png",
     "static/media/bootstrap-icons.woff?": "/lev/static/media/bootstrap-icons.7ff3ca6fa798de3f8ac2.woff",
     "static/media/frame.jpg": "/lev/static/media/frame.908851377bb3590d6b41.jpg",
@@ -45,12 +45,12 @@
     "static/media/vLev.svg": "/lev/static/media/vLev.a094d4f124a1c8cdbd093823a623734f.svg",
     "static/media/logo-minimal.svg": "/lev/static/media/logo-minimal.847021eb24895f33d3fce5f18c37486e.svg",
     "static/media/close.svg": "/lev/static/media/close.1741f188e447c7be7c96e81a0a31ebfe.svg",
-    "main.476857a4.css.map": "/lev/static/css/main.476857a4.css.map",
-    "main.e6230945.js.map": "/lev/static/js/main.e6230945.js.map",
+    "main.5bb0a1ce.css.map": "/lev/static/css/main.5bb0a1ce.css.map",
+    "main.6ebf037c.js.map": "/lev/static/js/main.6ebf037c.js.map",
     "787.577e3d93.chunk.js.map": "/lev/static/js/787.577e3d93.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.476857a4.css",
-    "static/js/main.e6230945.js"
+    "static/css/main.5bb0a1ce.css",
+    "static/js/main.6ebf037c.js"
   ]
 }
