@@ -1,3 +1,4 @@
+import React from 'react';
 import styles from '../../styles/Home.module.css';
 import phone from '../../images/home/single-phone.png';
 import phones from '../../images/home/dual-phones.png';

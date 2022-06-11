@@ -6,7 +6,7 @@ function BenefitsCard({img, title, text}) {
   const {container, header, content} = styles;
 
   return (
-    <div className={container}>
+    <div className={`card ${container}`}>
       <section className={header}>
         <img src={img} alt="" />
         <h1>{title}</h1>

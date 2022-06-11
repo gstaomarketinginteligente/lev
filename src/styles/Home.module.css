@@ -111,6 +111,9 @@
   display: -ms-flexbox;
   display: flex;
   width: 100vw;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -118,7 +121,6 @@
       -ms-flex-align: center;
           align-items: center;
   margin: 0 auto;
-  padding-top: 72px;
 }
 
 .secondSectionSlide {
@@ -407,9 +409,6 @@
   }
   .firstSection .secondArticle div {
     margin-top: -15vh;
-  }
-  .secondSection {
-    padding-bottom: 72px;
   }
   .thirdSection h1 span {
     background-color: var(--white);
