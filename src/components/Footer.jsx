@@ -1,8 +1,9 @@
 import React from 'react';
 import styles from '../styles/Footer.module.css';
 import logoFooter from '../images/logo-footer.svg';
-import appstoreImg from '../images/appstore.svg';
-import googleplayImg from '../images/googleplay.svg';
+import appstoreImg from '../images/appstore.svg'
+import googleplayImg from '../images/googleplay.svg'
+
 
 function Footer() {
     const {footerSectionTitle, storeSection, lev, footerLogo} = styles;
