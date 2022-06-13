@@ -10,8 +10,12 @@ footer {
       grid-template-rows: 60% 40%;
   -ms-grid-columns: 1fr 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr 1fr;
-      grid-template-areas: 'logo contatos app seja' 'copyright . . social';
   font-size: 1.8rem;
+}
+
+/* logo footer */
+footer > img {
+  width: 18.3rem;
 }
 
 footer div {
@@ -70,53 +74,64 @@ footer div i:not(:last-child) {
   background-color: white;
 }
 
-.logo {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: logo;
-}
-
-.contatos {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
-  grid-area: contatos;
-}
-
-.app {
-  -ms-grid-row: 1;
-  -ms-grid-column: 3;
-  grid-area: app;
-}
-
-.seja {
-  -ms-grid-row: 1;
-  -ms-grid-column: 4;
-  grid-area: seja;
-}
-
-.social {
-  -ms-grid-row: 2;
-  -ms-grid-column: 4;
-  grid-area: social;
-}
-
-.copyright {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  grid-area: copyright;
-}
-
-@media only screen and (max-width: 1366px) {
+@media (max-width: 1115px) {
   footer {
-    padding: 8rem 5vw 4rem 5vw;
+    height: 100rem;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    
+
+    text-align: center;
   }
-}
 
-@media only screen and (max-width: 1024px) {
-  footer {
-    -ms-grid-columns: 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-areas: 'logo contatos seja' 'copyright app social';
+  .footerLogo {
+    content: url('../images/footerlogomobile.svg');
+    margin: 0 auto 8rem;
+    order: 0;
+  }
+
+  footer > div:nth-child(1){
+    order: 2;
+  }
+  footer > div:nth-child(2){
+    order: 3;
+  }
+  footer > div:nth-child(3){
+    order: 1;
+  }
+  footer > div:nth-child(4){
+    order: 4;
+  }
+  footer > div:nth-child(5){
+    order: 6;
+  }
+  footer > div:nth-child(6){
+    display: none;
+  }
+  footer > div:nth-child(7){
+    display: none;
+  }
+  footer > div:nth-child(8){
+    order: 5;
+  }
+
+  footer > div {
+    margin-bottom: 8rem;
+  }
+
+  footer div p:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+
+  .storeSection {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .storeSection img:not(:last-child) {
+    margin-bottom: 0;
+    margin-right: 2rem;
   }
 }
 /*# sourceMappingURL=Footer.module.css.map */
