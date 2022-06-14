@@ -1,4 +1,3 @@
-<<<<<<< HEAD:src/pages/passenger/index.jsx
 import React, { useEffect, useState } from 'react';
 import styles from '../../styles/Passenger.module.css';
 import car from '../../images/passenger/car.png';
@@ -7,16 +6,6 @@ import appstore from '../../images/appstore-filled.svg';
 import vLev from '../../images/passenger/cards-icons/vLev.svg';
 import { benefits } from '../../data/benefits';
 import CardsContainer from '../../components/CardsContainer';
-=======
-import React from "react";
-import styles from "../../styles/Passenger.module.css";
-import car from "../../images/passenger/car.png";
-import googleplay from "../../images/googleplay-filled.svg";
-import appstore from "../../images/appstore-filled.svg";
-import vLev from "../../images/passenger/cards-icons/vLev.svg";
-import BenefitsCard from "../../components/BenefitsCard";
-import { benefits } from "../../data/benefits";
->>>>>>> c6fd59a32077a2a2bace031a93ba014014880448:src/pages/Passenger/index.jsx
 
 function Passenger() {
   const {
@@ -75,7 +64,6 @@ function Passenger() {
       </section>
 
       <div className={secCardsTitle}>
-<<<<<<< HEAD:src/pages/passenger/index.jsx
         <img src={vLev} alt='icone lev' />
         <h2>Vantagens de ser Lev.</h2>
       </div>
@@ -84,16 +72,6 @@ function Passenger() {
         cards={benefits.passenger}
         isMobile={isMobile}
       />
-=======
-        <img src={vLev} alt="icone lev" />
-        <h2>Vantagens de ser Lev.</h2>
-      </div>
-      <section className={sectionCards}>
-        {benefits.passenger.map(({ icon, title, text }) => (
-          <BenefitsCard key={title} img={icon} title={title} text={text} />
-        ))}
-      </section>
->>>>>>> c6fd59a32077a2a2bace031a93ba014014880448:src/pages/Passenger/index.jsx
     </main>
   );
 }
