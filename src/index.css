@@ -6,7 +6,7 @@ html {
   overflow-x: hidden;
 }
 
-@media only screen and (max-width: 1370px) {
+@media only screen and (max-width: 1024px) {
   #root {
     overflow: hidden;
   }
@@ -16,12 +16,6 @@ html {
   }
   body {
     overflow-x: hidden;
-  }
-}
-
-@media only screen and (max-width: 1024px) {
-  html {
-    font-size: 7px;
   }
 }
 
@@ -89,6 +83,4 @@ img {
   --white: white;
   --beige: #f9f5f2;
 }
-
-
 /*# sourceMappingURL=index.css.map */
