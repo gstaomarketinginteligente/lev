@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/lev/static/css/main.f690c94e.css",
-    "main.js": "/lev/static/js/main.f6c6b8a7.js",
+    "main.css": "/lev/static/css/main.2fe51a8a.css",
+    "main.js": "/lev/static/js/main.d601ab3f.js",
     "static/js/787.577e3d93.chunk.js": "/lev/static/js/787.577e3d93.chunk.js",
     "static/media/section3.jpg": "/lev/static/media/section3.c44dabf280ca88f85b5e.jpg",
     "static/media/car.png": "/lev/static/media/car.066a8947eeac1e409b3c.png",
@@ -14,7 +14,6 @@
     "static/media/celular-azul.png": "/lev/static/media/celular-azul.2d8169cd04bc5f8d1d97.png",
     "static/media/personMobile.png": "/lev/static/media/personMobile.599cf36643f28b370733.png",
     "static/media/frameMobile.jpg": "/lev/static/media/frameMobile.737f258fccaae8eb8d66.jpg",
-    "static/media/sec-3-background-mobile.jpg": "/lev/static/media/sec-3-background-mobile.0ff79a4275c58ac113c1.jpg",
     "static/media/celular-laranja.png": "/lev/static/media/celular-laranja.b06a1bca369767ce92b7.png",
     "static/media/bootstrap-icons.woff?": "/lev/static/media/bootstrap-icons.7ff3ca6fa798de3f8ac2.woff",
     "static/media/frame.jpg": "/lev/static/media/frame.908851377bb3590d6b41.jpg",
@@ -26,7 +25,6 @@
     "static/media/googleplay-filled.svg": "/lev/static/media/googleplay-filled.d49f1d4f2fe439ed8491a91a7300a71f.svg",
     "static/media/appstore.svg": "/lev/static/media/appstore.47a842ad912270e7b869e29c3f6c12ef.svg",
     "static/media/logo-footer.svg": "/lev/static/media/logo-footer.25273d84962954ef645e2a3d5ff614aa.svg",
-    "static/media/footerlogomobile.svg": "/lev/static/media/footerlogomobile.2f64c964bd7934b00142.svg",
     "static/media/googleplay.svg": "/lev/static/media/googleplay.261702fa4275620f5a4369499145ab6f.svg",
     "static/media/partnership.svg": "/lev/static/media/partnership.2427ea7447a90de0171d8c704172b6b4.svg",
     "static/media/prizes.svg": "/lev/static/media/prizes.f298697b556eb8f72f36fb5642670fc6.svg",
@@ -44,19 +42,17 @@
     "index.html": "/lev/index.html",
     "static/media/pontinha.svg": "/lev/static/media/pontinha.7170ff342337562f2fe7c7e2551b1539.svg",
     "static/media/v-seta.svg": "/lev/static/media/v-seta.5e65d18ed068be6cbd6e641a0bec7989.svg",
-    "static/media/timelinemobile.svg": "/lev/static/media/timelinemobile.a2511013a824ec4a753f.svg",
-    "static/media/timelinemobilesmall.svg": "/lev/static/media/timelinemobilesmall.f493bdba59070cff2067.svg",
     "static/media/info.svg": "/lev/static/media/info.f37557b700fa0abd2ae02fa40bfffce4.svg",
     "static/media/right-arrow.svg": "/lev/static/media/right-arrow.24dab487bd64c29654e4.svg",
     "static/media/vLev.svg": "/lev/static/media/vLev.a094d4f124a1c8cdbd093823a623734f.svg",
     "static/media/logo-minimal.svg": "/lev/static/media/logo-minimal.847021eb24895f33d3fce5f18c37486e.svg",
     "static/media/close.svg": "/lev/static/media/close.1741f188e447c7be7c96e81a0a31ebfe.svg",
-    "main.f690c94e.css.map": "/lev/static/css/main.f690c94e.css.map",
-    "main.f6c6b8a7.js.map": "/lev/static/js/main.f6c6b8a7.js.map",
+    "main.2fe51a8a.css.map": "/lev/static/css/main.2fe51a8a.css.map",
+    "main.d601ab3f.js.map": "/lev/static/js/main.d601ab3f.js.map",
     "787.577e3d93.chunk.js.map": "/lev/static/js/787.577e3d93.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f690c94e.css",
-    "static/js/main.f6c6b8a7.js"
+    "static/css/main.2fe51a8a.css",
+    "static/js/main.d601ab3f.js"
   ]
 }
