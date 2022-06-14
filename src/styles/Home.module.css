@@ -162,6 +162,8 @@
 
 .thirdSection article {
   position: absolute;
+  width: 100%;
+  padding: 0 25vw;
   z-index: 5;
   top: 50%;
   left: 50%;
@@ -189,7 +191,7 @@
   font-size: 4rem;
   line-height: 55px;
   color: var(--white);
-  margin-bottom: 32px;
+  margin-bottom: 2rem;
 }
 
 .thirdSection article p {
@@ -200,7 +202,7 @@
   line-height: 130%;
   text-align: center;
   letter-spacing: 0.05em;
-  margin-bottom: 48px;
+  margin-bottom: 3rem;
   color: var(--white);
 }
 
@@ -214,7 +216,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 20px;
+  gap: 2rem;
 }
 
 .thirdSection article div button {
@@ -222,7 +224,7 @@
   border: 2px solid var(--white);
   border-radius: 30px;
   color: var(--white);
-  padding: 12px 32px;
+  padding: 1.2rem 3.2rem;
 }
 
 .thirdSectionBackground {
@@ -393,6 +395,9 @@
     max-width: 180%;
     margin-left: 0;
   }
+  .thirdSection article {
+    padding: 0 20vw;
+  }
 }
 
 @media only screen and (max-width: 1024px) {
@@ -438,6 +443,22 @@
   .firstSection .secondArticle div h1 {
     font-size: 4rem;
     line-height: 5rem;
+  }
+  .thirdSection article {
+    padding: 0 5vw;
+  }
+  .thirdSection article section {
+    text-align: center;
+  }
+  .thirdSection article div {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    width: 100%;
+  }
+  .thirdSection article div button {
+    width: 100%;
   }
   .thirdSection h1 span {
     background-color: var(--white);
