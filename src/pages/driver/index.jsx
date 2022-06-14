@@ -1,3 +1,4 @@
+<<<<<<< HEAD:src/pages/driver/index.jsx
 import React, { useEffect, useState } from 'react';
 import styles from '../../styles/Driver.module.css';
 import person from '../../images/driver/person.png';
@@ -8,6 +9,18 @@ import pontinha from '../../images/home/pontinha.svg';
 import { benefits } from '../../data/benefits';
 import Calculator from '../../components/Calculator';
 import CardsContainer from '../../components/CardsContainer';
+=======
+import React, { useEffect, useState } from "react";
+import styles from "../../styles/Driver.module.css";
+import person from "../../images/driver/person.png";
+import personMobile from "../../images/driver/personMobile.png";
+import logoMinimal from "../../images/logo-minimal.svg";
+import levButton from "../../images/driver/levButton.svg";
+import BenefitsCard from "../../components/BenefitsCard";
+import pontinha from "../../images/home/pontinha.svg";
+import { benefits } from "../../data/benefits";
+import Calculator from "../../components/Calculator";
+>>>>>>> c6fd59a32077a2a2bace031a93ba014014880448:src/pages/Driver/index.jsx
 
 function Driver() {
   const {
@@ -21,13 +34,15 @@ function Driver() {
     calculatorSection,
     signinSection,
     head,
+    sectionContainer,
+    cardsSection
   } = styles;
 
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     checkIsMobile();
-    window.addEventListener('resize', () => {
+    window.addEventListener("resize", () => {
       checkIsMobile();
     });
   }, []);
@@ -43,31 +58,43 @@ function Driver() {
   return (
     <main className={container}>
       <section className={mainContent}>
-        <article>
-          <h2>Motorista</h2>
-          <h1>
-            Venha fazer parte do time de motoristas mais valorizado do Brasil!
-          </h1>
-          <p>Mais rápido. Mais barato. Pega Lev</p>
-          <button>Quero ser motorista</button>
-        </article>
-        <img
-          className={personS}
-          src={isMobile ? personMobile : person}
-          alt='Motorista segurando chave de carro'
-        />
-        <img className={tip} src={pontinha} alt='Logo' />
-      </section>
-      <section>
-        <div className={benefitsTitle}>
-          <img src={logoMinimal} alt='logo-minimal' />
-          <h1>Vantagens de ser Lev.</h1>
+        <div className={sectionContainer}>
+          <article>
+            <h2>Motorista</h2>
+            <h1>
+              Venha fazer parte do time de motoristas mais valorizado do Brasil!
+            </h1>
+            <p>Mais rápido. Mais barato. Pega Lev</p>
+            <button>Quero ser motorista</button>
+          </article>
+          <img
+            className={personS}
+            src={isMobile ? personMobile : person}
+            alt="Motorista segurando chave de carro"
+          />
+          <img className={tip} src={pontinha} alt="Logo" />
         </div>
+<<<<<<< HEAD:src/pages/driver/index.jsx
         <CardsContainer
           cards={benefits.driver}
           className={cardsContainer}
           isMobile={isMobile}
         />
+=======
+      </section>
+      <section className={cardsSection}>
+        <div className={sectionContainer}>
+          <div className={benefitsTitle}>
+            <img src={logoMinimal} alt="logo-minimal" />
+            <h1>Vantagens de ser Lev.</h1>
+          </div>
+          <div className={cardsContainer}>
+            {benefits.driver.map(({ icon, title, text }) => (
+              <BenefitsCard key={title} img={icon} title={title} text={text} />
+            ))}
+          </div>
+        </div>
+>>>>>>> c6fd59a32077a2a2bace031a93ba014014880448:src/pages/Driver/index.jsx
       </section>
       <section className={letterSection}>
         <h1>Na Lev você pode aumentar seus ganhos!</h1>
@@ -77,7 +104,7 @@ function Driver() {
           para quem almeja aumentar seus ganhos ou ter seu próprio negócio.
         </p>
         <button>Saiba mais</button>
-        <img src={levButton} alt='Lev' />
+        <img src={levButton} alt="Lev" />
       </section>
       <section className={calculatorSection}>
         <article className={head}>
@@ -106,10 +133,10 @@ function Driver() {
           </p>
         </article>
         <form>
-          <input type='text' placeholder='Nome:' />
-          <input type='email' placeholder='Email:' />
-          <input type='tel ' placeholder='Telefone:' />
-          <button type='submit' onClick={(e) => e.preventDefault()}>
+          <input type="text" placeholder="Nome:" />
+          <input type="email" placeholder="Email:" />
+          <input type="tel " placeholder="Telefone:" />
+          <button type="submit" onClick={(e) => e.preventDefault()}>
             Quero ser motorista Lev!
           </button>
         </form>

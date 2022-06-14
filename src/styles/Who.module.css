@@ -1,3 +1,9 @@
+.sectionContainer {
+  max-width: 1100px;
+  height: 100%;
+  margin: 0 auto;
+}
+
 .button {
   font-size: 2.4rem;
   border: 0.2rem solid white;
@@ -23,33 +29,44 @@
 }
 
 .mainSection {
-  min-height: 80vh;
-  padding: 5rem 15vw;
-  background: -webkit-gradient(linear, left top, left bottom, from(#2dc6ea), to(#2ba9c8));
+  min-height: 60vh;
+  padding: 5rem 5vw;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#2dc6ea),
+    to(#2ba9c8)
+  );
   background: linear-gradient(180deg, #2dc6ea 0%, #2ba9c8 100%);
   mix-blend-mode: normal;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
   color: white;
+}
+
+.mainSection h1 {
+  width: 1280px;
+  text-align: start;
 }
 
 .section2 {
   min-height: 50vh;
-  padding: 0 15vw;
+  padding: 0 5vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .section2 p:nth-child(2) {
@@ -65,34 +82,37 @@
 .section3 {
   background: url("../images/who/section3bg.jpg") center/cover;
   color: white;
+  padding: 0 5vw;
   min-height: 60vh;
-  padding: 0 42vw 0 15vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
-.section3 > p {
+.section3Content {
+  max-width: 55%;
+}
+
+.section3 p {
   margin: 3rem 0;
 }
 
 .section4 {
   min-height: 225vh;
-  padding: 0 15vw;
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: 10vw 1fr;
-      grid-template-rows: 10vw 1fr;
+  grid-template-rows: 10vw 1fr;
 }
 
-.section4 > h1 {
+.section4 h1 {
   color: var(--orange);
   font-size: 4.8rem;
   line-height: 10px;
@@ -100,9 +120,17 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin-left: 10vw;
+}
+
+.section4 h1 h1 {
+  margin: 0;
+}
+
+.section4ContentTitle {
+  display: none;
 }
 
 .section4 > h1 > img {
@@ -110,11 +138,15 @@
   margin-right: 2rem;
 }
 
+.section4 h1 > img.levsetaMobile {
+  display: none;
+}
+
 .section4ContentWrapper {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 15rem 1fr;
-      grid-template-columns: 15rem 1fr;
+  grid-template-columns: 15rem 1fr;
 }
 
 .section4ContentWrapper > img {
@@ -126,12 +158,223 @@
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 67rem 0.7fr;
-      grid-template-columns: 67rem 0.7fr;
+  grid-template-columns: 67rem 0.7fr;
   position: relative;
+}
+
+.celularAzulMobile,
+.celularLaranjaMobile {
+  display: none;
 }
 
 .section4Content > img {
   position: absolute;
-  right: -23rem;
+  min-width: 100rem;
+  z-index: -10;
+  right: -23%;
 }
+
+@media (max-width: 1265px) {
+  .section4Content > img {
+    right: -28%;
+  }
+}
+
+@media (max-width: 1230px) {
+  .section4Content > img {
+    right: -35%;
+  }
+}
+
+@media (max-width: 1170px) {
+  .section4Content > img {
+    right: -40%;
+  }
+}
+
+@media (max-width: 810px) {
+  .section4 {
+    display: flex;
+    flex-direction: column;
+    min-height: 400vh;
+    text-align: center;
+    position: relative;
+  }
+
+  .section4 > h1 {
+    display: block;
+    line-height: normal;
+    margin: 5rem auto 55rem;
+  }
+
+  .section4 > h1 > h1 {
+    margin-top: 3rem;
+    font-size: 4.2rem;
+  }
+
+  .section4 h1 > img.levsetaMobile {
+    display: block;
+    transform: rotate(90deg);
+    margin: 0 auto;
+  }
+
+  .section4ContentTitle {
+    display: block;
+    color: orange;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+  }
+
+  .section4 > h1 > img {
+    display: none;
+  }
+
+  .section4ContentWrapper {
+    grid-template-columns: 0% 1fr;
+    margin: 0 auto;
+  }
+
+  .section4ContentWrapper h2 {
+    line-height: 3.2rem;
+  }
+
+  .section4ContentWrapper p {
+    font-size: 2.4rem;
+  }
+
+  .section4ContentWrapper > div {
+    text-align: start;
+  }
+
+  img.timelineimg {
+    content: url("../images/who/timelinemobile.svg");
+    min-width: 22.3px;
+    max-width: 22.3px;
+    margin: 0 0 0 -5rem;
+  }
+
+  .section4Content {
+    grid-template-columns: 35rem 0.7fr;
+  }
+
+  .section4Content > img {
+    display: none;
+  }
+
+  .celularAzulMobile,
+  .celularLaranjaMobile {
+    display: block;
+    min-width: 90rem;
+  }
+
+  img.celularLaranjaMobile {
+    display: block;
+    margin: -136% 0 0 -100%;
+  }
+
+  img.celularAzulMobile {
+    display: block;
+    /* padding: 0 50% 0 0; */
+    margin: 40% 0 0 -100%;
+  }
+}
+
+@media (max-width: 740px) {
+  .section3 {
+    min-height: 80vh;
+    display: flex;
+    padding: 15vw 5vw;
+    background: url(../images/who/sec-3-background-mobile.jpg) center/cover no-repeat;
+    justify-content: unset;
+  }
+
+  .section3Content {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 575px) {
+  .section2 {
+    min-height: 60vh;
+  }
+}
+
+@media (max-width: 552px) {
+  .section2 {
+    min-height: 60vh;
+  }
+}
+
+@media (max-width: 462px) {
+  .section3 h1 {
+    font-size: 3.2rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .section2 {
+    min-height: 65vh;
+  }
+  
+  .section4ContentWrapper {
+    grid-template-columns: 10% 1fr;
+    margin: 0 auto;
+  }
+
+  img.timelineimg {
+    margin: 0 0 0 -1rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .section2 {
+    min-height: 70vh;
+  }
+
+  .section3 {
+    min-height: 70vh;
+  }
+
+  .section4ContentTitle {
+    font-size: 2.8rem;
+  }
+  .section4ContentWrapper h2 {
+    line-height: 3rem;
+  }
+  .section4ContentWrapper p {
+    font-size: 2.2rem;
+  }
+
+  img.timelineimg {
+    content: url("../images/who/timelinemobilesmall.svg");
+    margin-top: 7rem;
+  }
+
+  .section4Content {
+    grid-template-columns: 30rem 0.7fr;
+  }
+
+  img.celularLaranjaMobile {
+    display: block;
+    margin: -136% 0 0 -125%;
+  }
+
+  img.celularAzulMobile {
+    display: block;
+    /* padding: 0 50% 0 0; */
+    margin: 40% 0 0 -125%;
+  }
+}
+
+@media (max-width: 350px) {
+  .section2 {
+    min-height: 85vh;
+  }
+
+  .section3 {
+    min-height: 80vh;
+  }
+}
+
 /*# sourceMappingURL=Who.module.css.map */

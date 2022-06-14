@@ -17,6 +17,7 @@
   font-size: 2.4rem;
 }
 
+
 .sectionMain {
   background: -webkit-gradient(linear, left top, left bottom, from(#2dc6ea), to(#2ba9c8));
   background: linear-gradient(180deg, #2dc6ea 0%, #2ba9c8 100%);
@@ -25,10 +26,10 @@
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   justify-items: center;
 }
 
@@ -42,6 +43,19 @@
 
 .sectionMain > img {
   width: 80rem;
+}
+
+.highText {
+  background-color: white;
+  color: #2dc6ea;
+  width: fit-content;
+  padding: 0.5rem 5rem;
+  border-radius: 5rem;
+}
+
+.storeButtons {
+  display: flex;
+  flex-wrap: nowrap;
 }
 
 .storeButtons a, .storeButtons img {
@@ -61,7 +75,7 @@
   gap: 4rem;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[3];
+  -ms-grid-columns: (1fr);
       grid-template-columns: repeat(3, 1fr);
   -ms-grid-rows: 1fr 1fr;
       grid-template-rows: 1fr 1fr;
@@ -142,6 +156,61 @@
   .cardText {
     text-align: start;
     height: auto;
+  }
+}
+
+@media (max-width: 915px) {
+  .sectionMain {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    /* text-align: center; */
+  }
+
+  .sectionMain > img {
+    width: 55rem;
+  }
+
+  .sectionMain h1 ~ p {
+    font-size: 3.2rem;
+  }
+
+  .storeButtons {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 645px) {
+  .sectionMain h1 {
+    font-size: 6rem;
+  }
+
+  .sectionMain h1 ~ p {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 605px) {
+  .sectionMain h1 {
+    font-size: 5rem;
+  }
+
+  .sectionMain h1 ~ p {
+    font-size: 2.4rem;
+  }
+
+  .sectionMain > img {
+    width: 75rem;
+  }
+}
+
+@media (max-width: 510px) {
+  .sectionMain h1 {
+    font-size: 3.8rem;
+  }
+
+  .sectionMain h1 ~ p {
+    font-size: 2rem;
   }
 }
 /*# sourceMappingURL=Passenger.module.css.map */

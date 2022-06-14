@@ -1,37 +1,50 @@
+.sectionContainer {
+  max-width: 1100px;
+  height: 100%;
+  margin: 0 auto;
+}
+
 footer {
-  font-family: 'Ubuntu';
+  font-family: "Ubuntu";
   background-color: black;
   color: white;
   height: 50rem;
   padding: 8rem 15vw 4rem 15vw;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: 60% 40%;
-      grid-template-rows: 60% 40%;
-  -ms-grid-columns: 1fr 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-      grid-template-areas: 'logo contatos app seja' 'copyright . . social';
   font-size: 1.8rem;
 }
 
-footer div {
+footer .sectionContainer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 60% 40%;
+  grid-template-rows: 60% 40%;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+/* logo footer */
+footer .sectionContainer > img {
+  width: 18.3rem;
+}
+
+footer .sectionContainer div {
   width: 100%;
 }
 
-footer div p:not(:last-child) {
+footer .sectionContainer div p:not(:last-child) {
   margin-bottom: 4rem;
 }
 
-footer div i {
+footer .sectionContainer div i {
   font-size: 3rem;
   cursor: pointer;
 }
 
-footer div i:hover {
+footer .sectionContainer div i:hover {
   color: var(--orange);
 }
 
-footer div i:not(:last-child) {
+footer .sectionContainer div i:not(:last-child) {
   margin-right: 3rem;
 }
 
@@ -46,8 +59,8 @@ footer div i:not(:last-child) {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .storeSection img {
@@ -70,53 +83,65 @@ footer div i:not(:last-child) {
   background-color: white;
 }
 
-.logo {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: logo;
-}
-
-.contatos {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
-  grid-area: contatos;
-}
-
-.app {
-  -ms-grid-row: 1;
-  -ms-grid-column: 3;
-  grid-area: app;
-}
-
-.seja {
-  -ms-grid-row: 1;
-  -ms-grid-column: 4;
-  grid-area: seja;
-}
-
-.social {
-  -ms-grid-row: 2;
-  -ms-grid-column: 4;
-  grid-area: social;
-}
-
-.copyright {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  grid-area: copyright;
-}
-
-@media only screen and (max-width: 1366px) {
+@media (max-width: 1115px) {
   footer {
-    padding: 8rem 5vw 4rem 5vw;
+    height: 100rem;
+    text-align: center;
   }
-}
 
-@media only screen and (max-width: 1024px) {
-  footer {
-    -ms-grid-columns: 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-areas: 'logo contatos seja' 'copyright app social';
+  footer .sectionContainer {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+  }
+
+  .footerLogo {
+    content: url("../images/footerlogomobile.svg");
+    margin: 0 auto 8rem;
+    order: 0;
+  }
+
+  footer .sectionContainer > div:nth-child(1) {
+    order: 2;
+  }
+  footer .sectionContainer > div:nth-child(2) {
+    order: 3;
+  }
+  footer .sectionContainer > div:nth-child(3) {
+    order: 1;
+  }
+  footer .sectionContainer > div:nth-child(4) {
+    order: 4;
+  }
+  footer .sectionContainer > div:nth-child(5) {
+    order: 6;
+  }
+  footer .sectionContainer > div:nth-child(6) {
+    display: none;
+  }
+  footer .sectionContainer > div:nth-child(7) {
+    display: none;
+  }
+  footer .sectionContainer > div:nth-child(8) {
+    order: 5;
+  }
+
+  footer .sectionContainer > div {
+    margin-bottom: 8rem;
+  }
+
+  footer .sectionContainer div p:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+
+  .storeSection {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .storeSection img:not(:last-child) {
+    margin-bottom: 0;
+    margin-right: 2rem;
   }
 }
 /*# sourceMappingURL=Footer.module.css.map */
