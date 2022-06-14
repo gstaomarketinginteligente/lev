@@ -33,14 +33,9 @@
 
 .container .mainContent article {
   -ms-flex-item-align: center;
-<<<<<<< HEAD
       -ms-grid-row-align: center;
       align-self: center;
   z-index: 100;
-=======
-  -ms-grid-row-align: center;
-  align-self: center;
->>>>>>> c6fd59a32077a2a2bace031a93ba014014880448
 }
 
 .container .mainContent article h1 {
@@ -330,7 +325,6 @@
 }
 
 @media only screen and (max-width: 1024px) {
-<<<<<<< HEAD
   .container .mainContent {
     position: relative;
     -ms-grid-columns: 100vw;
@@ -342,10 +336,10 @@
     -webkit-box-sizing: content-box;
             box-sizing: content-box;
     width: 90vw;
-=======
+  }
+
   .sectionContainer {
     height: auto;
->>>>>>> c6fd59a32077a2a2bace031a93ba014014880448
   }
 
   .container .mainContent {

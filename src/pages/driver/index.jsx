@@ -1,4 +1,3 @@
-<<<<<<< HEAD:src/pages/driver/index.jsx
 import React, { useEffect, useState } from 'react';
 import styles from '../../styles/Driver.module.css';
 import person from '../../images/driver/person.png';
@@ -9,18 +8,6 @@ import pontinha from '../../images/home/pontinha.svg';
 import { benefits } from '../../data/benefits';
 import Calculator from '../../components/Calculator';
 import CardsContainer from '../../components/CardsContainer';
-=======
-import React, { useEffect, useState } from "react";
-import styles from "../../styles/Driver.module.css";
-import person from "../../images/driver/person.png";
-import personMobile from "../../images/driver/personMobile.png";
-import logoMinimal from "../../images/logo-minimal.svg";
-import levButton from "../../images/driver/levButton.svg";
-import BenefitsCard from "../../components/BenefitsCard";
-import pontinha from "../../images/home/pontinha.svg";
-import { benefits } from "../../data/benefits";
-import Calculator from "../../components/Calculator";
->>>>>>> c6fd59a32077a2a2bace031a93ba014014880448:src/pages/Driver/index.jsx
 
 function Driver() {
   const {
@@ -74,27 +61,11 @@ function Driver() {
           />
           <img className={tip} src={pontinha} alt="Logo" />
         </div>
-<<<<<<< HEAD:src/pages/driver/index.jsx
         <CardsContainer
           cards={benefits.driver}
           className={cardsContainer}
           isMobile={isMobile}
         />
-=======
-      </section>
-      <section className={cardsSection}>
-        <div className={sectionContainer}>
-          <div className={benefitsTitle}>
-            <img src={logoMinimal} alt="logo-minimal" />
-            <h1>Vantagens de ser Lev.</h1>
-          </div>
-          <div className={cardsContainer}>
-            {benefits.driver.map(({ icon, title, text }) => (
-              <BenefitsCard key={title} img={icon} title={title} text={text} />
-            ))}
-          </div>
-        </div>
->>>>>>> c6fd59a32077a2a2bace031a93ba014014880448:src/pages/Driver/index.jsx
       </section>
       <section className={letterSection}>
         <h1>Na Lev você pode aumentar seus ganhos!</h1>
