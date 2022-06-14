@@ -4,6 +4,7 @@ import levseta from "../../images/who/v-seta.svg";
 import timeline from "../../images/who/timeline.svg";
 import celularAzul from "../../images/who/celular-azul.png";
 import celularLaranja from "../../images/who/celular-laranja.png";
+import rightArrow from "../../images/who/right-arrow.svg";
 
 function Who() {
   const {
@@ -16,6 +17,11 @@ function Who() {
     section4ContentWrapper,
     whoMain,
     button,
+    celularAzulMobile,
+    celularLaranjaMobile,
+    timelineimg,
+    section4ContentTitle,
+    levsetaMobile,
   } = styles;
 
   return (
@@ -50,19 +56,26 @@ function Who() {
           para quem almeja aumentar seus ganhos ou ter seu próprio negócio.
         </p>
         <a href="#" className={button}>
-          Saiba mais
+          Saiba mais <img src={rightArrow} alt="seta direita" />
         </a>
       </section>
 
       <section className={section4}>
         <h1>
-          <img src={levseta} alt="lev v" /> História da Lev.
+          <img src={levseta} className={levsetaMobile} alt="lev v" />
+          <img src={levseta} alt="lev v" /> <h1>História da Lev.</h1>
         </h1>
         <div className={section4ContentWrapper}>
-          <img src={timeline} alt="linha do tempo" />
+          <img src={timeline} className={timelineimg} alt="linha do tempo" />
           <div>
             <div className={section4Content}>
               <div>
+                <img
+                  src={celularLaranja}
+                  className={celularLaranjaMobile}
+                  alt="celular lev laranja"
+                />
+                <h2 className={section4ContentTitle}>2018</h2>
                 <p>
                   A história da Lev começa em 2018, na cidade de Caldas Novas -
                   GO, quando um dos sócios da Moby, nome que a marca tinha
@@ -78,6 +91,7 @@ function Who() {
                   mobilidade urbana que o aplicativo poderia trazer para a
                   cidade e região. <br />
                   <br />
+                  <h2 className={section4ContentTitle}>2019</h2>
                   Assim sendo a Lev Moby iniciou seus serviços e primeiros
                   testes em 2019 na prática.
                   <br />
@@ -97,6 +111,7 @@ function Who() {
             <div className={section4Content}>
               <div>
                 <p>
+                  <h2 className={section4ContentTitle}>2021</h2>
                   Em 2021 um terceiro sócio foi captado. Agregando muito
                   conhecimento em estratégias comerciais e aumentando os
                   investimentos, o objetivo da empresa com a entrada desse sócio
@@ -108,6 +123,7 @@ function Who() {
                   Moby, solução que chegou para solucionar um gargalo de SEO que
                   o nome Moby sozinho carregava. <br />
                   <br />
+                  <h2 className={section4ContentTitle}>2022</h2>
                   Em 2022 a marca Lev da início à expansão para todo o Brasil.
                   Com a região de grande Florianópolis sendo a primeira região
                   vendida, a captação de usuários e motoristas no litoral
@@ -117,7 +133,12 @@ function Who() {
                   <br />O mercado de mobilidade urbana no Brasil é enorme e
                   tende a crescer muito mais, a principal meta da Lev é
                   conquistar usuários, motoristas e investidores em todo o
-                  território brasileiro, a hora é agora
+                  território brasileiro, a hora é agora.
+                  <img
+                    src={celularAzul}
+                    className={celularAzulMobile}
+                    alt="celular lev azul"
+                  />
                 </p>
               </div>
               <img src={celularAzul} alt="celular lev azul" />
