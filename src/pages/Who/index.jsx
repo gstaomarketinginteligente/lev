@@ -22,45 +22,56 @@ function Who() {
     timelineimg,
     section4ContentTitle,
     levsetaMobile,
+    sectionContainer,
+    section3Content,
   } = styles;
 
   return (
     <main className={whoMain}>
       <section className={mainSection}>
-        <h1>Quem somos</h1>
+        <div className={sectionContainer}>
+          <h1>Quem somos</h1>
+        </div>
       </section>
 
       <section className={section2}>
-        <p className={section2Title}>
-          A Lev chegou ao Brasil para engrandecer o mercado de mobilidade
-          urbana.
-        </p>
-        <p>
-          Garantindo liberdade e segurança para nossos parceiros e clientes, o
-          objetivo da Lev é ouvir, valorizar e trabalhar com ética,
-          transparência e leveza com os parceiros Lev.
-        </p>
-        <p>
-          Com valores e taxas menores que seus concorrentes, a Lev Moby tem uma
-          visão de longo prazo, a qual busca centralizar o mercado brasileiro de
-          aplicativos de mobilidade urbana, sempre respeitando os princípios
-          éticos e valores do segmento
-        </p>
+        <div className={sectionContainer}>
+          <p className={section2Title}>
+            A Lev chegou ao Brasil para engrandecer o mercado de mobilidade
+            urbana.
+          </p>
+          <p>
+            Garantindo liberdade e segurança para nossos parceiros e clientes, o
+            objetivo da Lev é ouvir, valorizar e trabalhar com ética,
+            transparência e leveza com os parceiros Lev.
+          </p>
+          <p>
+            Com valores e taxas menores que seus concorrentes, a Lev Moby tem
+            uma visão de longo prazo, a qual busca centralizar o mercado
+            brasileiro de aplicativos de mobilidade urbana, sempre respeitando
+            os princípios éticos e valores do segmento
+          </p>
+        </div>
       </section>
 
       <section className={section3}>
-        <h1>Na Lev você pode aumentar seus ganhos!</h1>
-        <p>
-          Além de ser convidativa a quem já atua como motorista em outros
-          aplicativos de mobilidade, a Lev se torna uma oportunidade de negócio
-          para quem almeja aumentar seus ganhos ou ter seu próprio negócio.
-        </p>
-        <a href="#" className={button}>
-          Saiba mais <img src={rightArrow} alt="seta direita" />
-        </a>
+        <div className={sectionContainer}>
+          <div className={section3Content}>
+            <h1>Na Lev você pode aumentar seus ganhos!</h1>
+            <p>
+              Além de ser convidativa a quem já atua como motorista em outros
+              aplicativos de mobilidade, a Lev se torna uma oportunidade de
+              negócio para quem almeja aumentar seus ganhos ou ter seu próprio
+              negócio.
+            </p>
+            <a href="#" className={button}>
+              Saiba mais <img src={rightArrow} alt="seta direita" />
+            </a>
+          </div>
+        </div>
       </section>
 
-      <section className={section4}>
+      <section className={`${section4} ${sectionContainer}`}>
         <h1>
           <img src={levseta} className={levsetaMobile} alt="lev v" />
           <img src={levseta} alt="lev v" /> <h1>História da Lev.</h1>

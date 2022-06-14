@@ -1,3 +1,9 @@
+.sectionContainer {
+  max-width: 1280px;
+  height: 100%;
+  margin: 0 auto;
+}
+
 .button {
   font-size: 2.4rem;
   border: 0.2rem solid white;
@@ -43,6 +49,11 @@
   color: white;
 }
 
+.mainSection h1 {
+  width: 1280px;
+  text-align: start;
+}
+
 .section2 {
   min-height: 50vh;
   padding: 0 5vw;
@@ -71,8 +82,8 @@
 .section3 {
   background: url("../images/who/section3bg.jpg") center/cover;
   color: white;
+  padding: 0 5vw;
   min-height: 60vh;
-  padding: 0 42vw 0 5vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -85,20 +96,23 @@
   justify-content: center;
 }
 
-.section3 > p {
+.section3Content {
+  max-width: 55%;
+}
+
+.section3 p {
   margin: 3rem 0;
 }
 
 .section4 {
   min-height: 225vh;
-  padding: 0 5vw;
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: 10vw 1fr;
   grid-template-rows: 10vw 1fr;
 }
 
-.section4 > h1 {
+.section4 h1 {
   color: var(--orange);
   font-size: 4.8rem;
   line-height: 10px;
@@ -109,6 +123,10 @@
   -ms-flex-align: center;
   align-items: center;
   margin-left: 10vw;
+}
+
+.section4 h1 h1 {
+  margin: 0;
 }
 
 .section4ContentTitle {
@@ -186,7 +204,7 @@
   .section4 > h1 {
     display: block;
     line-height: normal;
-    margin: 5rem 0 55rem 0;
+    margin: 5rem auto 55rem;
   }
 
   .section4 > h1 > h1 {
@@ -269,6 +287,10 @@
     padding: 15vw 5vw;
     background: url(../images/who/sec-3-background-mobile.jpg) center/cover no-repeat;
     justify-content: unset;
+  }
+
+  .section3Content {
+    max-width: 100%;
   }
 }
 
