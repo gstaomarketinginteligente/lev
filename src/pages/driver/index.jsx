@@ -21,15 +21,13 @@ function Driver() {
     calculatorSection,
     signinSection,
     head,
-    sectionContainer,
-    cardsSection
   } = styles;
 
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     checkIsMobile();
-    window.addEventListener("resize", () => {
+    window.addEventListener('resize', () => {
       checkIsMobile();
     });
   }, []);
@@ -45,21 +43,25 @@ function Driver() {
   return (
     <main className={container}>
       <section className={mainContent}>
-        <div className={sectionContainer}>
-          <article>
-            <h2>Motorista</h2>
-            <h1>
-              Venha fazer parte do time de motoristas mais valorizado do Brasil!
-            </h1>
-            <p>Mais rápido. Mais barato. Pega Lev</p>
-            <button>Quero ser motorista</button>
-          </article>
-          <img
-            className={personS}
-            src={isMobile ? personMobile : person}
-            alt="Motorista segurando chave de carro"
-          />
-          <img className={tip} src={pontinha} alt="Logo" />
+        <article>
+          <h2>Motorista</h2>
+          <h1>
+            Venha fazer parte do time de motoristas mais valorizado do Brasil!
+          </h1>
+          <p>Mais rápido. Mais barato. Pega Lev</p>
+          <button>Quero ser motorista</button>
+        </article>
+        <img
+          className={personS}
+          src={isMobile ? personMobile : person}
+          alt='Motorista segurando chave de carro'
+        />
+        <img className={tip} src={pontinha} alt='Logo' />
+      </section>
+      <section>
+        <div className={benefitsTitle}>
+          <img src={logoMinimal} alt='logo-minimal' />
+          <h1>Vantagens de ser Lev.</h1>
         </div>
         <CardsContainer
           cards={benefits.driver}
@@ -75,7 +77,7 @@ function Driver() {
           para quem almeja aumentar seus ganhos ou ter seu próprio negócio.
         </p>
         <button>Saiba mais</button>
-        <img src={levButton} alt="Lev" />
+        <img src={levButton} alt='Lev' />
       </section>
       <section className={calculatorSection}>
         <article className={head}>
@@ -104,10 +106,10 @@ function Driver() {
           </p>
         </article>
         <form>
-          <input type="text" placeholder="Nome:" />
-          <input type="email" placeholder="Email:" />
-          <input type="tel " placeholder="Telefone:" />
-          <button type="submit" onClick={(e) => e.preventDefault()}>
+          <input type='text' placeholder='Nome:' />
+          <input type='email' placeholder='Email:' />
+          <input type='tel ' placeholder='Telefone:' />
+          <button type='submit' onClick={(e) => e.preventDefault()}>
             Quero ser motorista Lev!
           </button>
         </form>
