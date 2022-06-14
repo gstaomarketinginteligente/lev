@@ -31,7 +31,7 @@ function HomeSlider() {
       initialSlide={1}
       className={container}
       arrows={!isMobile}
-      shift='50'
+      shift={50}
       centerPadding={30}
     >
       {[

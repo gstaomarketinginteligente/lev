@@ -3,11 +3,11 @@ import { useEffect, useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Footer from './components/Footer';
 import Header from './components/Header';
-import Home from './pages/Home';
-import Help from './pages/Help';
-import Driver from './pages/Driver';
-import User from './pages/Passenger';
-import Who from './pages/Who';
+import Home from './pages/home';
+import Help from './pages/help';
+import Driver from './pages/driver';
+import User from './pages/passenger';
+import Who from './pages/who';
 
 function App() {
   const [headerActive, setHeaderActive] = useState(false);

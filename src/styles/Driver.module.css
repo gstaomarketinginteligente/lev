@@ -19,6 +19,7 @@
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  z-index: 100;
 }
 
 .container .mainContent article h1 {
@@ -309,7 +310,7 @@
         grid-template-columns: 100vw;
     -ms-grid-rows: 60% 40%;
         grid-template-rows: 60% 40%;
-    padding: 20vw 5vw 0 5vw;
+    padding: 10vw 5vw 0 5vw;
     padding-bottom: 20vh;
     -webkit-box-sizing: content-box;
             box-sizing: content-box;
@@ -334,9 +335,10 @@
             transform: translate(-50%, -50%);
   }
   .letterSection {
-    padding: 20vh 5vw 30vh 5vw;
+    padding: 20vh 8vw 30vh 8vw;
   }
   .letterSection::before {
+    background-image: url(../images/driver/frameMobile.jpg);
     -webkit-clip-path: polygon(100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);
             clip-path: polygon(100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);
   }

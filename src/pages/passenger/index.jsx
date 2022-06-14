@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from '../../styles/Passenger.module.css';
 import car from '../../images/passenger/car.png';
 import googleplay from '../../images/googleplay-filled.svg';
 import appstore from '../../images/appstore-filled.svg';
 import vLev from '../../images/passenger/cards-icons/vLev.svg';
-import BenefitsCard from '../../components/BenefitsCard';
 import { benefits } from '../../data/benefits';
+import CardsContainer from '../../components/CardsContainer';
 
 function Passenger() {
   const {
@@ -15,6 +15,23 @@ function Passenger() {
     sectionCards,
     secCardsTitle,
   } = styles;
+
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    checkIsMobile();
+    window.addEventListener('resize', () => {
+      checkIsMobile();
+    });
+  }, []);
+
+  const checkIsMobile = () => {
+    if (window.innerWidth <= 764) {
+      setIsMobile(true);
+    } else {
+      setIsMobile(false);
+    }
+  };
 
   return (
     <main>
@@ -45,20 +62,15 @@ function Passenger() {
         <img src={car} alt='carro lev' />
       </section>
 
-        <div className={secCardsTitle}>
-          <img src={vLev} alt='icone lev' />
-          <h2>Vantagens de ser Lev.</h2>
-        </div>
-      <section className={sectionCards}>
-        {benefits.passenger.map(({ icon, title, text }) => (
-            <BenefitsCard
-              key={title}
-              img={icon}
-              title={title}
-              text={text}
-            />
-          ))}
-      </section>
+      <div className={secCardsTitle}>
+        <img src={vLev} alt='icone lev' />
+        <h2>Vantagens de ser Lev.</h2>
+      </div>
+      <CardsContainer
+        className={sectionCards}
+        cards={benefits.passenger}
+        isMobile={isMobile}
+      />
     </main>
   );
 }

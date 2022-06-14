@@ -49,6 +49,10 @@
 }
 
 .chevron {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  place-self: center;
   font-size: 2rem;
   color: var(--black);
   -webkit-transform: rotate(90deg);

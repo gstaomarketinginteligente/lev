@@ -22,14 +22,10 @@ function Faq({ question, answer }) {
         <h3>{question}</h3>
         <i className={`bi ${chevron} bi-chevron-down ${answerActive ? active : ''}`}></i>
       </div>
-      <hr />
       <div className={ `${answerContainer} ${answerActive ? active : ''}` }>
         <p>{answer}</p>
       </div>
-      {/* <details>
-        <summary>{question}</summary>
-        <p>{answer}</p>
-      </details> */}
+      <hr />
     </div>
   )
 }

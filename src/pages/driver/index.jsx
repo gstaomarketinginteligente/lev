@@ -4,10 +4,10 @@ import person from '../../images/driver/person.png';
 import personMobile from '../../images/driver/personMobile.png';
 import logoMinimal from '../../images/logo-minimal.svg';
 import levButton from '../../images/driver/levButton.svg';
-import BenefitsCard from '../../components/BenefitsCard';
 import pontinha from '../../images/home/pontinha.svg';
 import { benefits } from '../../data/benefits';
 import Calculator from '../../components/Calculator';
+import CardsContainer from '../../components/CardsContainer';
 
 function Driver() {
   const {
@@ -63,16 +63,11 @@ function Driver() {
           <img src={logoMinimal} alt='logo-minimal' />
           <h1>Vantagens de ser Lev.</h1>
         </div>
-        <div className={cardsContainer}>
-          {benefits.driver.map(({ icon, title, text }) => (
-            <BenefitsCard
-              key={title}
-              img={icon}
-              title={title}
-              text={text}
-            />
-          ))}
-        </div>
+        <CardsContainer
+          cards={benefits.driver}
+          className={cardsContainer}
+          isMobile={isMobile}
+        />
       </section>
       <section className={letterSection}>
         <h1>Na Lev você pode aumentar seus ganhos!</h1>

@@ -4,6 +4,7 @@ import phone from '../../images/home/single-phone.png';
 import phones from '../../images/home/dual-phones.png';
 import pontinha from '../../images/home/pontinha.svg';
 import HomeSlider from '../../components/HomeSlider';
+import logoMinimal from '../../images/logo-minimal.svg';
 import faq from '../../data/faq';
 import Faq from '../../components/Faq';
 
@@ -79,6 +80,7 @@ function Home() {
       <section className={fourthSection}>
         <div>
           <section className={fourthSectionCard}>
+            <img src={logoMinimal} alt="Logo" />
             <h1>
               Venha conhecer <br />a nossa história!
             </h1>

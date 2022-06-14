@@ -1,0 +1,9 @@
+.container {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.container > div {
+  padding: 0 50px 10px 50px !important;
+}
+/*# sourceMappingURL=CardsContainer.module.css.map */
