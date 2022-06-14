@@ -262,7 +262,7 @@
   }
 }
 
-@media (max-width: 740px) {
+@media (max-width: 850px) {
   .section3 {
     min-height: 80vh;
     display: flex;
