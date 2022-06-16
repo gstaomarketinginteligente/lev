@@ -94,7 +94,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 10rem 5rem;
+  margin: 10rem 5rem 5vh;
 }
 
 .secCardsTitle img {
@@ -165,7 +165,6 @@
     display: flex;
     flex-direction: column-reverse;
     justify-content: center;
-    /* text-align: center; */
   }
 
   .sectionMain > img {
@@ -214,4 +213,3 @@
     font-size: 2rem;
   }
 }
-/*# sourceMappingURL=Passenger.module.css.map */

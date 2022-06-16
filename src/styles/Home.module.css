@@ -29,6 +29,10 @@
   padding-right: 10vw;
 }
 
+.firstSection .firstArticle div {
+  margin-top: -15%;
+}
+
 .firstSection .secondArticle {
   display: -ms-grid;
   display: grid;
@@ -53,11 +57,17 @@
   background-color: transparent;
   color: var(--white);
   padding: 0.8rem 1.6rem;
-  font-family: 'Ubuntu';
   font-style: normal;
   font-weight: 400;
   font-size: 1.8rem;
   line-height: 150%;
+  -webkit-transition: 0.1s ease;
+  transition: 0.1s ease;
+}
+
+.firstSection .secondArticle button:hover {
+  background-color: var(--white);
+  color: var(--orange);
 }
 
 .slogan {
@@ -78,7 +88,7 @@
   font-style: normal;
   font-weight: 700;
   font-size: 6.4rem;
-  line-height: 74px;
+  line-height: 7rem;
   text-align: start;
   margin: 1.5rem 0 1rem;
   color: var(--white);
@@ -216,11 +226,18 @@
 }
 
 .thirdSection article div button {
+  min-width: 200px;
   background-color: transparent;
   border: 2px solid var(--white);
   border-radius: 30px;
   color: var(--white);
   padding: 1.2rem 3.2rem;
+  font-weight: 600;
+}
+
+.thirdSection article div button:hover {
+  background-color: var(--white);
+  color: var(--orange);
 }
 
 .thirdSectionBackground {
@@ -291,9 +308,9 @@
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .fourthSectionCard img {
@@ -332,16 +349,27 @@
 
 .fourthSectionCard button {
   position: relative;
-  font-family: 'Ubuntu';
-  font-style: normal;
   font-weight: 400;
   font-size: 1.8rem;
+  text-align: initial;
   line-height: 150%;
   color: var(--gray);
   background-color: transparent;
   border: 2px solid var(--gray);
   border-radius: 30px;
-  padding: 6px 32px;
+  padding: 6px 12px;
+  width: 70%;
+}
+
+.fourthSectionCard button:hover {
+  background-color: var(--orange);
+  border-color: var(--orange);
+  color: var(--white);
+}
+
+.fourthSectionCard button:hover::after {
+  -webkit-filter: invert(100%) sepia(9%) saturate(1782%) hue-rotate(0deg) brightness(109%) contrast(108%);
+          filter: invert(100%) sepia(9%) saturate(1782%) hue-rotate(0deg) brightness(109%) contrast(108%);
 }
 
 .fourthSectionCard button::after {
@@ -442,7 +470,7 @@
     line-height: 5rem;
   }
   .thirdSection article {
-    padding: 0 5vw;
+    padding: 0 4rem;
   }
   .thirdSection article section {
     text-align: center;
@@ -455,7 +483,8 @@
     width: 100%;
   }
   .thirdSection article div button {
-    width: 100%;
+    width: 95%;
+    min-width: 0;
   }
   .thirdSection h1 span {
     background-color: var(--white);

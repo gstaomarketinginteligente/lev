@@ -14,11 +14,11 @@ function Faq({ question, answer }) {
   const [answerActive, setAnswerActive] = useState(false);
 
   return (
-    <div className={ container }>
-      <div
-        className={ questionContainer }
-        onClick={ () => setAnswerActive((prev) => !prev) }
-      >
+    <div 
+      className={ container }
+      onClick={ () => setAnswerActive((prev) => !prev) }
+    >
+      <div className={ questionContainer }>
         <h3>{question}</h3>
         <i className={`bi ${chevron} bi-chevron-down ${answerActive ? active : ''}`}></i>
       </div>

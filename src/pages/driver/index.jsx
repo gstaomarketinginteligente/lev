@@ -69,6 +69,7 @@ function Driver() {
           cards={benefits.driver}
           className={cardsContainer}
           isMobile={isMobile}
+          dots
         />
       </section>
       <section className={letterSection}>

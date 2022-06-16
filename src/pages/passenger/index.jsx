@@ -73,6 +73,7 @@ function Passenger() {
         className={sectionCards}
         cards={benefits.passenger}
         isMobile={isMobile}
+        dots
       />
     </main>
   );

@@ -1,9 +1,13 @@
 .container {
   width: 100%;
-  margin-bottom: 2rem;
+  margin-bottom: 10vh;
 }
 
 .container > div {
   padding: 0 50px 10px 50px !important;
+}
+
+.orange li button:before {
+  color: #ff8f29 !important;
 }
 /*# sourceMappingURL=CardsContainer.module.css.map */

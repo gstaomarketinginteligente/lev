@@ -17,8 +17,8 @@
   padding: 2rem;
   gap: 2rem;
   background-color: var(--beige);
-  -webkit-box-shadow: 0 4px 4px 0 var(--drop-shadow);
-          box-shadow: 0 4px 4px 0 var(--drop-shadow);
+  -webkit-box-shadow: 4px 4px 4px 0 var(--drop-shadow);
+          box-shadow: 4px 4px 4px 0 var(--drop-shadow);
 }
 
 .header {
