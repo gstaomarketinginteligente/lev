@@ -5,7 +5,6 @@ import timeline from "../../images/who/timeline.svg";
 import celularAzul from "../../images/who/celular-azul.png";
 import celularLaranja from "../../images/who/celular-laranja.png";
 import rightArrow from "../../images/who/right-arrow.svg";
-import { Link } from 'react-router-dom';
 
 function Who() {
   const {
@@ -65,9 +64,9 @@ function Who() {
               negócio para quem almeja aumentar seus ganhos ou ter seu próprio
               negócio.
             </p>
-            <Link to='/lev' className={button}>
+            <a href="#" className={button}>
               Saiba mais <img src={rightArrow} alt="seta direita" />
-            </Link>
+            </a>
           </div>
         </div>
       </section>

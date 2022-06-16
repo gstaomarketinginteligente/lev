@@ -49,10 +49,8 @@ function Calculator() {
     info,
     infoIcon,
     openModal,
-    totalTaxaMoby,
+    totaltaxa,
     totalTaxaGasolinaMoby,
-    totalTaxaB,
-    totalTaxaGasolinaB,
     modal,
     modalHeader,
     closeModal,
@@ -68,14 +66,26 @@ function Calculator() {
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [calculatorForm, setCalculatorForm] = useState({
-    daysWorked: NaN,
-    dailyRuns: NaN,
-    dailyExpenses: NaN,
-    avarageIncome: NaN,
+    diasTrabalhados: null,
+    corridasDiarias: null,
+    gastosDiarios: null,
+    valorMedioCorrida: null,
+  });
+  const [totalBrutoState, setTotalBrutoState] = useState(0.00);
+  const [taxa, setTaxa] = useState({
+    lev: 0.00,
+    a: 0.00,
+    b: 0.00,
+  });
+  const [despesasMensaisState, setDespesasMensaisState] = useState(0.00);
+  const [totalLiquidoState, setTotalLiquidoState] = useState({
+    lev: 0.00,
+    a: 0.00,
+    b: 0.00,
   });
 
   const toggleModal = () => {
-    !isModalOpen ? disableScroll() : enableScroll();
+    isModalOpen ? enableScroll() : disableScroll();
     setIsModalOpen(!isModalOpen);
   };
 
@@ -83,6 +93,41 @@ function Calculator() {
     setCalculatorForm((prev) => ({
       ...prev,
       [id]: +value,
+    }));
+  };
+
+  const calcularClick = () => {
+    const {
+      valorMedioCorrida,
+      corridasDiarias,
+      diasTrabalhados,
+      gastosDiarios,
+    } = calculatorForm;
+    const TAXA_LEV = 0.11;
+    const TAXA_A = 0.31;
+    const TAXA_B = 0.29;
+    const total = valorMedioCorrida * corridasDiarias * diasTrabalhados;
+    const taxaLev = total * TAXA_LEV;
+    const taxaA = total * TAXA_A;
+    const taxaB = total * TAXA_B;
+    const despesas = gastosDiarios * diasTrabalhados;
+    const liquidoLev = total - taxaLev - despesas;
+    const liquidoA = total - taxaA - despesas;
+    const liquidoB = total - taxaB - despesas;
+
+    setTotalBrutoState(total.toFixed(2));
+    setTaxa((prev) => ({
+      ...prev,
+      lev: taxaLev.toFixed(2),
+      a: taxaA.toFixed(2),
+      b: taxaB.toFixed(2),
+    }));
+    setDespesasMensaisState(despesas.toFixed(2));
+    setTotalLiquidoState((prev) => ({
+      ...prev,
+      lev: liquidoLev.toFixed(2),
+      a: liquidoA.toFixed(2),
+      b: liquidoB.toFixed(2),
     }));
   };
 
@@ -97,124 +142,157 @@ function Calculator() {
             </div>
             <div className={inputAreas}>
               <p>Dias Trabalhados:</p>
-              <p className={diasConcorrente}>00</p>
+              <p className={diasConcorrente}>
+                {calculatorForm.diasTrabalhados}
+              </p>
             </div>
 
             <div className={inputAreas}>
               <p>Corridas por Dia:</p>
-              <p className={corridasConcorrente}>00</p>
+              <p className={corridasConcorrente}>
+                {calculatorForm.corridasDiarias}
+              </p>
             </div>
 
             <div className={inputAreas}>
               <p>Despesas diárias:</p>
-              <p className={consumoConcorrente}>R$0,00</p>
+              <p className={consumoConcorrente}>
+                {`R$${calculatorForm.gastosDiarios ?? 0}`}
+              </p>
             </div>
 
             <div className={inputAreas}>
               <p>Valor Médio da Corrida:</p>
-              <p className={valorCorridaConcorrente}>R$0,00</p>
+              <p className={valorCorridaConcorrente}>
+                {`R$${calculatorForm.valorMedioCorrida ?? 0}`}
+              </p>
             </div>
           </div>
           <div className={results}>
             <div className={inputAreas}>
               <p>Total Bruto:</p>
-              <p className={totalBruto}>R$0,00</p>
+              <p className={totalBruto}>
+                {`R$${totalBrutoState}`}
+              </p>
             </div>
             <div className={inputAreas}>
               <p>Taxa Concorrente A:</p>
-              <p className={totalTaxaA}>R$0,00</p>
+              <p className={totalTaxaA}>
+                {`R$${taxa.a}`}
+              </p>
             </div>
             <div className={inputAreas}>
               <p>Despesas Mensais:</p>
-              <p className={despesasMensais}>R$0,00</p>
+              <p className={despesasMensais}>
+              {`R$${despesasMensaisState}`}
+              </p>
             </div>
             <div className={inputAreas}>
               <p>Total de ganho líquido:</p>
-              <p className={totalTaxaGasolinaA}>R$0,00</p>
+              <p className={totalTaxaGasolinaA}>
+              {`R$${totalLiquidoState.a}`}
+              </p>
             </div>
           </div>
         </div>
 
+
         <div className={`${calculator} ${moby}`}>
-          <div className={parameters}>
-            <div className={calculatorHeader}>
-              <div className={image}>
-                <img src={logo} alt='' />
-                <h4>Lev</h4>
+          <form onSubmit={ e => e.preventDefault() }>
+            <div className={parameters}>
+              <div className={calculatorHeader}>
+                <div className={image}>
+                  <img src={logo} alt='' />
+                  <h4>Lev</h4>
+                </div>
+                <div onClick={toggleModal} className={`${info} ${openModal}`}>
+                  <img src={modalIconInfo} className={infoIcon} alt='info' />
+                </div>
               </div>
-              <div onClick={toggleModal} className={`${info} ${openModal}`}>
-                <img src={modalIconInfo} className={infoIcon} alt='info' />
-              </div>
-            </div>
 
-            <div className={inputAreas}>
+              <div className={inputAreas}>
+                <div className={inputArea}>
+                  <label htmlFor='dias'>Dias trabalhados:</label>
+                  <input
+                    className={dias}
+                    id='diasTrabalhados'
+                    type='number'
+                    onChange={formOnChangeHandler}
+                    required
+                    value={calculatorForm.diasTrabalhados}
+                  />
+                </div>
+
+                <div className={inputArea}>
+                  <label htmlFor='corridas'>Corridas por dia:</label>
+                  <input
+                    className={corridas}
+                    id='corridasDiarias'
+                    type='number'
+                    onChange={formOnChangeHandler}
+                    required
+                    value={calculatorForm.corridasDiarias}
+                  />
+                </div>
+              </div>
+
               <div className={inputArea}>
-                <label htmlFor='dias'>Dias trabalhados:</label>
+                <label htmlFor='consumo'>Despesas diárias (R$):</label>
                 <input
-                  className={dias}
-                  id="daysWorked"
+                  className={consumo}
+                  id='gastosDiarios'
                   type='number'
                   onChange={formOnChangeHandler}
-                  value={calculatorForm.daysWorked}
+                  required
+                  value={calculatorForm.gastosDiarios}
                 />
               </div>
 
               <div className={inputArea}>
-                <label htmlFor='corridas'>Corridas por dia:</label>
+                <label htmlFor='valorCorrida'>Valor médio da corrida (R$):</label>
                 <input
-                  className={corridas}
-                  id="dailyRuns"
+                  className={valorCorrida}
+                  id='valorMedioCorrida'
                   type='number'
                   onChange={formOnChangeHandler}
-                  value={calculatorForm.dailyRuns}
+                  required
+                  value={calculatorForm.valorMedioCorrida}
                 />
               </div>
             </div>
-
-            <div className={inputArea}>
-              <label htmlFor='consumo'>Despesas diárias (R$):</label>
-              <input
-                className={consumo}
-                id="dailyExpenses"
-                type='number'
-                onChange={formOnChangeHandler}
-                value={calculatorForm.dailyExpenses}
-              />
+            <div className={results}>
+              <div className={inputAreas}>
+                <p>Total Bruto:</p>
+                <p className={totalBruto}>
+                  {`R$${totalBrutoState}`}
+                </p>
+              </div>
+              <div className={inputAreas}>
+                <p>Taxa Lev Moby:</p>
+                <p className={totaltaxa}>
+                  {`R$${taxa.lev}`}
+                </p>
+              </div>
+              <div className={inputAreas}>
+                <p>Despesas Mensais:</p>
+                <p className={despesasMensais}>
+                  {`R$${despesasMensaisState}`}
+                </p>
+              </div>
+              <div className={inputAreas}>
+                <p>Total de ganho líquido:</p>
+                <p className={totalTaxaGasolinaMoby}>
+                  {`R$${totalLiquidoState.lev}`}
+                </p>
+              </div>
+              <button className={btnCalculate} onClick={calcularClick}>
+                Calcular
+              </button>
             </div>
-
-            <div className={inputArea}>
-              <label htmlFor='valorCorrida'>Valor médio da corrida (R$):</label>
-              <input
-                className={valorCorrida}
-                id="avarageIncome"
-                type='number'
-                onChange={formOnChangeHandler}
-                value={calculatorForm.avarageIncome}
-              />
-            </div>
-          </div>
-          <div className={results}>
-            <div className={inputAreas}>
-              <p>Total Bruto:</p>
-              <p className={totalBruto}>R$0,00</p>
-            </div>
-            <div className={inputAreas}>
-              <p>Taxa Lev Moby:</p>
-              <p className={totalTaxaMoby}>R$0,00</p>
-            </div>
-            <div className={inputAreas}>
-              <p>Despesas Mensais:</p>
-              <p className={despesasMensais}>R$0,00</p>
-            </div>
-            <div className={inputAreas}>
-              <p>Total de ganho líquido:</p>
-              <p className={totalTaxaGasolinaMoby}>R$0,00</p>
-            </div>
-            <button className={btnCalculate}>Calcular</button>
-          </div>
+          </form>
 
           <Modal
-            isModalOpen={isModalOpen}
+            isOpen={isModalOpen}
             onRequestClose={toggleModal}
             contentLabel='My dialog'
             style={customStyles}>
@@ -268,40 +346,56 @@ function Calculator() {
             </div>
             <div className={inputAreas}>
               <p>Dias Trabalhados:</p>
-              <p className={diasConcorrente}>00</p>
+              <p className={diasConcorrente}>
+                {calculatorForm.diasTrabalhados}
+              </p>
             </div>
 
             <div className={inputAreas}>
               <p>Corridas por Dia:</p>
-              <p className={corridasConcorrente}>00</p>
+              <p className={corridasConcorrente}>
+                {calculatorForm.corridasDiarias}
+              </p>
             </div>
 
             <div className={inputAreas}>
               <p>Despesas diárias:</p>
-              <p className={consumoConcorrente}>R$0,00</p>
+              <p className={consumoConcorrente}>
+                {`R$${calculatorForm.gastosDiarios ?? 0}`}
+              </p>
             </div>
 
             <div className={inputAreas}>
               <p>Valor Médio da Corrida:</p>
-              <p className={valorCorridaConcorrente}>R$0,00</p>
+              <p className={valorCorridaConcorrente}>
+                {`R$${calculatorForm.valorMedioCorrida ?? 0}`}
+              </p>
             </div>
           </div>
           <div className={results}>
             <div className={inputAreas}>
               <p>Total Bruto:</p>
-              <p className={totalBruto}>R$0,00</p>
+              <p className={totalBruto}>
+                {`R$${totalBrutoState}`}
+              </p>
             </div>
             <div className={inputAreas}>
               <p>Taxa Concorrente B:</p>
-              <p className={totalTaxaB}>R$0,00</p>
+              <p className={totalTaxaA}>
+                {`R$${taxa.b}`}
+              </p>
             </div>
             <div className={inputAreas}>
               <p>Despesas Mensais:</p>
-              <p className={despesasMensais}>R$0,00</p>
+              <p className={despesasMensais}>
+              {`R$${despesasMensaisState}`}
+              </p>
             </div>
             <div className={inputAreas}>
               <p>Total de ganho líquido:</p>
-              <p className={totalTaxaGasolinaB}>R$0,00</p>
+              <p className={totalTaxaGasolinaA}>
+              {`R$${totalLiquidoState.b}`}
+              </p>
             </div>
           </div>
         </div>

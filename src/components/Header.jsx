@@ -68,7 +68,6 @@ function Header({ headerActive }) {
           <Link to='/who'>Quem somos</Link>
           <Link to='/driver'>Motorista</Link>
           <Link to='/passenger'>Passageiro</Link>
-          {/* <Link to='/security'>Segurança</Link> */}
           <Link to='/help'>Ajuda</Link>
           <Link to='/lev' className={lev}>
             Quero ser motorista Lev
