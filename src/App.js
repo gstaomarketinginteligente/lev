@@ -1,6 +1,6 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, useNavigate } from 'react-router-dom';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import Home from './pages/home';
@@ -11,11 +11,13 @@ import Who from './pages/who';
 
 function App() {
   const [headerActive, setHeaderActive] = useState(false);
-
+  const navigate = useNavigate();
   useEffect(() => {
     window.onscroll = function() {
       showHeader();
     };
+    navigate('/lev');
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   } , []);
 
   const showHeader = () => {

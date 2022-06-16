@@ -43,7 +43,7 @@ function Home() {
         </article>
         <article className={secondArticle}>
           <div>
-            <p className={slogan}>Vem ser Lev!</p>
+            <p className={slogan}>Segurança!</p>
             <h1 className={spotlight}>
               Viaje com segurança e sem preocupações!
             </h1>

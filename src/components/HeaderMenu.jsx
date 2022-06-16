@@ -15,10 +15,10 @@ function HeaderMenu({ lev, setIsMenuOpen, open }) {
     <div className={ `${container} ${!open && inactive}` }>
       <i className="bi bi-x" onClick={ closeMenu }></i>
       <nav className={ nav }>
-        <Link to='/who'>Quem somos</Link>
         <Link to='/driver'>Motorista</Link>
         <Link to='/passenger'>Passageiro</Link>
-        <Link to='/help'>Ajuda</Link>
+        <Link to='/who'>Quem somos</Link>
+        {/* <Link to='/help'>Ajuda</Link> */}
         <Link to='/lev' className={ `${lev} ${levMobile}` }>
           Quero ser motorista Lev
         </Link>

@@ -110,7 +110,7 @@ function Driver() {
           <input type='email' placeholder='Email:' />
           <input type='tel ' placeholder='Telefone:' />
           <button type='submit' onClick={(e) => e.preventDefault()}>
-            Quero ser motorista Lev!
+            Quero ser motorista!
           </button>
         </form>
       </section>
