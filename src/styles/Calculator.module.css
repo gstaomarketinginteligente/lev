@@ -261,6 +261,9 @@ p.infoDescription {
 @media (max-width: 785px) {
   .calculatorsWrapper {
     overflow-x: scroll;
+    width: 100vw;
+    padding: 0 5vw;
+    margin-left: -5vw;
   }
 
   .calculators {

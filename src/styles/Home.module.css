@@ -61,20 +61,15 @@
 }
 
 .slogan {
-  font-family: 'Ubuntu';
-  width: -webkit-fit-content;
+  background-color: white;
+  color: #2dc6ea;
   width: -moz-fit-content;
+  width: -webkit-fit-content;
   width: fit-content;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 2.4rem;
-  line-height: 130%;
+  padding: 0.5rem 5rem;
+  border-radius: 5rem;
   letter-spacing: 0.05em;
-  padding: 0.5rem 2rem;
-  margin-bottom: 16px;
-  border-radius: 3rem;
-  background-color: var(--white);
-  color: var(--blue);
+  font-size: 2.4rem;
 }
 
 .spotlight {
@@ -84,7 +79,7 @@
   font-size: 6.4rem;
   line-height: 74px;
   text-align: start;
-  margin-bottom: 2rem;
+  margin: 1.5rem 0 3rem;
   color: var(--white);
 }
 
@@ -415,7 +410,7 @@
     margin: 0 auto;
   }
   .firstSection .firstArticle div {
-    margin-top: -12vh;
+    margin-top: -5vh;
   }
   .firstSection .firstArticle div h1 {
     font-size: 4rem;
@@ -429,7 +424,6 @@
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    padding-left: 5vw;
   }
   .firstSection .secondArticle img {
     height: 70%;
