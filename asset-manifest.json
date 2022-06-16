@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/lev/static/css/main.f690c94e.css",
+    "main.css": "/lev/static/css/main.600e21a5.css",
     "main.js": "/lev/static/js/main.6ecd7ec5.js",
     "static/js/787.577e3d93.chunk.js": "/lev/static/js/787.577e3d93.chunk.js",
     "static/media/section3.jpg": "/lev/static/media/section3.c44dabf280ca88f85b5e.jpg",
@@ -51,12 +51,12 @@
     "static/media/vLev.svg": "/lev/static/media/vLev.a094d4f124a1c8cdbd093823a623734f.svg",
     "static/media/logo-minimal.svg": "/lev/static/media/logo-minimal.847021eb24895f33d3fce5f18c37486e.svg",
     "static/media/close.svg": "/lev/static/media/close.1741f188e447c7be7c96e81a0a31ebfe.svg",
-    "main.f690c94e.css.map": "/lev/static/css/main.f690c94e.css.map",
+    "main.600e21a5.css.map": "/lev/static/css/main.600e21a5.css.map",
     "main.6ecd7ec5.js.map": "/lev/static/js/main.6ecd7ec5.js.map",
     "787.577e3d93.chunk.js.map": "/lev/static/js/787.577e3d93.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f690c94e.css",
+    "static/css/main.600e21a5.css",
     "static/js/main.6ecd7ec5.js"
   ]
 }
