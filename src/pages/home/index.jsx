@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styles from '../../styles/Home.module.css';
 import phone from '../../images/home/single-phone.png';
 import phones from '../../images/home/dual-phones.png';
@@ -7,8 +7,13 @@ import HomeSlider from '../../components/HomeSlider';
 import logoMinimal from '../../images/logo-minimal.svg';
 import faq from '../../data/faq';
 import Faq from '../../components/Faq';
+import { scrollTop } from '../../helpers/scrollHelper';
 
 function Home() {
+  useEffect(() => {
+    scrollTop();
+  },[])
+
   const {
     container,
     firstSection,

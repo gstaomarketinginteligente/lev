@@ -6,6 +6,7 @@ import appstore from '../../images/appstore-filled.svg';
 import vLev from '../../images/passenger/cards-icons/vLev.svg';
 import { benefits } from '../../data/benefits';
 import CardsContainer from '../../components/CardsContainer';
+import { scrollTop } from '../../helpers/scrollHelper';
 
 function Passenger() {
   const {
@@ -21,6 +22,7 @@ function Passenger() {
 
   useEffect(() => {
     checkIsMobile();
+    scrollTop();
     window.addEventListener('resize', () => {
       checkIsMobile();
     });

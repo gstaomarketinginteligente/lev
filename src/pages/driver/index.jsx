@@ -8,6 +8,7 @@ import pontinha from '../../images/home/pontinha.svg';
 import { benefits } from '../../data/benefits';
 import Calculator from '../../components/Calculator';
 import CardsContainer from '../../components/CardsContainer';
+import { scrollTop } from '../../helpers/scrollHelper';
 
 function Driver() {
   const {
@@ -27,6 +28,7 @@ function Driver() {
 
   useEffect(() => {
     checkIsMobile();
+    scrollTop();
     window.addEventListener('resize', () => {
       checkIsMobile();
     });

@@ -3,6 +3,7 @@ import styles from '../../styles/Help.module.css';
 import faq from '../../data/faq';
 import Faq from '../../components/Faq';
 import Database from '../../firebase/firebase';
+import { scrollTop } from '../../helpers/scrollHelper';
 
 function Help() {
   const {
@@ -24,6 +25,7 @@ function Help() {
   });
 
   useEffect(() => {
+    scrollTop();
     const db = new Database();
     const fetchFaq = async () => {
       const faq = await db.getFaq();
