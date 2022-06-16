@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import logo from '../images/driver/calculator/logo.svg';
 import modalIconInfo from '../images/driver/calculator/info.svg';
 import modalIconClose from '../images/driver/calculator/close.svg';
@@ -66,10 +66,10 @@ function Calculator() {
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [calculatorForm, setCalculatorForm] = useState({
-    diasTrabalhados: null,
-    corridasDiarias: null,
-    gastosDiarios: null,
-    valorMedioCorrida: null,
+    diasTrabalhados: '',
+    corridasDiarias: '',
+    gastosDiarios: '',
+    valorMedioCorrida: '',
   });
   const [totalBrutoState, setTotalBrutoState] = useState(0.00);
   const [taxa, setTaxa] = useState({
@@ -83,6 +83,15 @@ function Calculator() {
     a: 0.00,
     b: 0.00,
   });
+
+  useEffect(() => {
+    const wrapper = document.querySelector(`.${calculatorsWrapper}`);
+    const { scrollWidth, clientWidth } = wrapper;
+
+
+    wrapper.scrollLeft = (scrollWidth - clientWidth) / 2;
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const toggleModal = () => {
     isModalOpen ? enableScroll() : disableScroll();
