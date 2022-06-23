@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import styles from "../../styles/Home.module.css";
 import phone from "../../images/home/single-phone.png";
 import phones from "../../images/home/dual-phones.png";
@@ -74,8 +74,12 @@ function Home() {
             atendê-los e muuito mais, venha saber tudo!
           </p>
           <div>
-            <a className={button}>Benefícios de Motorista</a>
-            <a className={button}>Benefícios de Usuário</a>
+            <Link to="/driver">
+              <a className={button}>Benefícios de Motorista</a>
+            </Link>
+            <Link to="/passenger">
+              <a className={button}>Benefícios de Usuário</a>
+            </Link>
           </div>
         </article>
         <div className={thirdSectionBackground}></div>
@@ -91,7 +95,9 @@ function Home() {
               Saiba como a Lev foi criada, quais são os nossos valores, missão e
               visão!
             </p>
-            <a className={button}>Quero conhecer</a>
+            <Link to="/who">
+              <a className={button}>Quero conhecer</a>
+            </Link>
           </section>
         </div>
       </section>

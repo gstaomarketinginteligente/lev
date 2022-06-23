@@ -62,6 +62,7 @@
 .button {
   font-size: 1.8rem;
   cursor: pointer;
+  width: fit-content;
 }
 
 .firstSection .secondArticle .lowProfile {
@@ -347,7 +348,7 @@
   background-color: transparent;
   border: 2px solid var(--gray);
   border-radius: 30px;
-  padding: 6px 32px;
+  padding: 6px 40px 6px 14px;
 }
 
 .fourthSectionCard .button::after {
