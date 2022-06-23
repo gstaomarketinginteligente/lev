@@ -304,19 +304,8 @@
       no-repeat;
     justify-content: unset;
   }
-
   .section3Content {
     max-width: 100%;
-  }
-}
-
-@media (max-width: 575px) {
-  .section2 {
-  }
-}
-
-@media (max-width: 552px) {
-  .section2 {
   }
 }
 
@@ -327,9 +316,6 @@
 }
 
 @media (max-width: 450px) {
-  .section2 {
-  }
-
   .section4ContentWrapper {
     grid-template-columns: 10% 1fr;
     margin: 0 auto;
@@ -341,12 +327,6 @@
 }
 
 @media (max-width: 400px) {
-  .section2 {
-  }
-
-  .section3 {
-  }
-
   .section4ContentTitle {
     font-size: 2.8rem;
   }
