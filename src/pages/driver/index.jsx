@@ -8,6 +8,7 @@ import pontinha from '../../images/home/pontinha.svg';
 import { benefits } from '../../data/benefits';
 import Calculator from '../../components/Calculator';
 import CardsContainer from '../../components/CardsContainer';
+import { scrollTop } from '../../helpers/scrollHelper';
 
 function Driver() {
   const {
@@ -27,6 +28,7 @@ function Driver() {
 
   useEffect(() => {
     checkIsMobile();
+    scrollTop();
     window.addEventListener('resize', () => {
       checkIsMobile();
     });
@@ -67,6 +69,7 @@ function Driver() {
           cards={benefits.driver}
           className={cardsContainer}
           isMobile={isMobile}
+          dots
         />
       </section>
       <section className={letterSection}>
@@ -110,7 +113,7 @@ function Driver() {
           <input type='email' placeholder='Email:' />
           <input type='tel ' placeholder='Telefone:' />
           <button type='submit' onClick={(e) => e.preventDefault()}>
-            Quero ser motorista Lev!
+            Quero ser motorista!
           </button>
         </form>
       </section>

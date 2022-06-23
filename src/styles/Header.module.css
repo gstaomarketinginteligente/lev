@@ -27,10 +27,22 @@
 
 .container.active .lev {
   border: 2px solid var(--blue);
+  -webkit-transition: 0.1s ease;
+  transition: 0.1s ease;
+}
+
+.container.active .lev:hover {
+  border-color: var(--orange);
 }
 
 .container.active a {
   color: var(--blue);
+  -webkit-transition: 0.1s ease;
+  transition: 0.1s ease;
+}
+
+.container.active a:hover {
+  color: var(--orange);
 }
 
 .container canvas {
@@ -66,12 +78,28 @@
   color: var(--white);
   text-decoration: none;
   margin: auto;
+  -webkit-transition: 0.1s ease;
+  transition: 0.1s ease;
+}
+
+.container a:hover {
+  color: var(--gray);
+}
+
+.container a:last-child:hover {
+  color: var(--orange);
 }
 
 .lev {
   border: 2px solid var(--white);
   border-radius: 30px;
   padding: 8px 32px;
+  -webkit-transition: 0.1s ease;
+  transition: 0.1s ease;
+}
+
+.lev:hover {
+  background-color: var(--white);
 }
 
 .menu {

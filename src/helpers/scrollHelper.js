@@ -39,3 +39,10 @@ export function enableScroll() {
   window.removeEventListener('touchmove', preventDefault, wheelOpt);
   window.removeEventListener('keydown', preventDefaultForScrollKeys, false);
 }
+
+export const scrollTop = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'auto',
+  });
+}

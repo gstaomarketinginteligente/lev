@@ -3,8 +3,8 @@ import BenefitsCard from './BenefitsCard';
 import styles from '../styles/CardsContainer.module.css';
 import { Slider } from 'infinite-react-carousel/lib';
 
-function CardsContainer({ cards, className, isMobile }) {
-  const { container } = styles;
+function CardsContainer({ cards, className, isMobile, dots }) {
+  const { container, orange } = styles;
 
   return isMobile ? (
     <Slider
@@ -14,6 +14,8 @@ function CardsContainer({ cards, className, isMobile }) {
       arrows={!isMobile}
       shift={30}
       centerPadding={50}
+      dots={dots}
+      dotsClass={`carousel-dots ${orange}`}
     >
       {cards.map(({ icon, title, text }) => (
         <BenefitsCard key={title} img={icon} title={title} text={text} />

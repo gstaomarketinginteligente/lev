@@ -1,12 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "../../styles/Who.module.css";
 import levseta from "../../images/who/v-seta.svg";
 import timeline from "../../images/who/timeline.svg";
 import celularAzul from "../../images/who/celular-azul.png";
 import celularLaranja from "../../images/who/celular-laranja.png";
 import rightArrow from "../../images/who/right-arrow.svg";
+import { scrollTop } from '../../helpers/scrollHelper';
 
 function Who() {
+  useEffect(() => {
+    scrollTop();
+  },[])
+
   const {
     mainSection,
     section2,

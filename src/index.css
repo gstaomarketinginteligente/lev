@@ -2,7 +2,7 @@
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-size: 10px;
+  font-size: 8px;
   overflow-x: hidden;
 }
 
@@ -83,12 +83,10 @@ img {
   --dark-blue: #02a0c6;
   --orange: #ff8f29;
   --dark-orange: #e46d00;
+  --bright-gray: #727272;
   --gray: #2d2d2d;
   --black: black;
-  --drop-shadow: rgba(0, 0, 0, 0.1);
+  --drop-shadow: rgba(0, 0, 0, 0.2);
   --white: white;
   --beige: #f9f5f2;
 }
-
-
-/*# sourceMappingURL=index.css.map */
