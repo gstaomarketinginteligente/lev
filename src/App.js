@@ -30,7 +30,7 @@ function App() {
     <>
       <Header headerActive={ headerActive } />
       <Routes>
-        <Route path='/lev' element={ <Home /> } />
+        <Route path='/' element={ <Home /> } />
         <Route path='/help' element={ <Help /> } />
         <Route path='/driver' element={ <Driver /> } />
         <Route path='/passenger' element={ <User /> } />

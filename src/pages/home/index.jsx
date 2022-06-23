@@ -1,12 +1,13 @@
-import React from 'react';
-import styles from '../../styles/Home.module.css';
-import phone from '../../images/home/single-phone.png';
-import phones from '../../images/home/dual-phones.png';
-import pontinha from '../../images/home/pontinha.svg';
-import HomeSlider from '../../components/HomeSlider';
-import logoMinimal from '../../images/logo-minimal.svg';
-import faq from '../../data/faq';
-import Faq from '../../components/Faq';
+import React from "react";
+import { Link } from 'react-router-dom';
+import styles from "../../styles/Home.module.css";
+import phone from "../../images/home/single-phone.png";
+import phones from "../../images/home/dual-phones.png";
+import pontinha from "../../images/home/pontinha.svg";
+import HomeSlider from "../../components/HomeSlider";
+import logoMinimal from "../../images/logo-minimal.svg";
+import faq from "../../data/faq";
+import Faq from "../../components/Faq";
 
 function Home() {
   const {
@@ -24,13 +25,14 @@ function Home() {
     fourthSection,
     fourthSectionCard,
     fifthSection,
+    button,
   } = styles;
-  
+
   return (
     <main className={container}>
       <section className={firstSection}>
         <article className={firstArticle}>
-          <img src={phone} alt='Smartphone' />
+          <img src={phone} alt="Smartphone" />
           <div>
             <p className={slogan}>Vem ser Lev!</p>
             <h1 className={spotlight}>
@@ -51,11 +53,11 @@ function Home() {
               Sistema de rastreamento para acompanhar o trajeto durante sua
               corrida.
             </p>
-            <button>Saiba mais</button>
+            <a className={button}>Saiba mais</a>
           </div>
-          <img src={phones} alt='Smartphones' />
+          <img src={phones} alt="Smartphones" />
         </article>
-        <img className={tip} src={pontinha} alt='pontinha' />
+        <img className={tip} src={pontinha} alt="pontinha" />
       </section>
       <section className={secondSection}>
         <HomeSlider />
@@ -63,19 +65,20 @@ function Home() {
       <section className={thirdSection}>
         <article>
           <section>
-            <h1>Conheça todos os <span>nossos benefícios!</span></h1>
+            <h1>
+              Conheça todos os <span>nossos benefícios!</span>
+            </h1>
           </section>
           <p>
             Cashback para motoristas e usuários, prêmios, suporte físico para
             atendê-los e muuito mais, venha saber tudo!
           </p>
           <div>
-            <button>Benefícios de Motorista</button>
-            <button>Benefícios de Usuário</button>
+            <a className={button}>Benefícios de Motorista</a>
+            <a className={button}>Benefícios de Usuário</a>
           </div>
         </article>
-        <div className={thirdSectionBackground}>
-        </div>
+        <div className={thirdSectionBackground}></div>
       </section>
       <section className={fourthSection}>
         <div>
@@ -88,7 +91,7 @@ function Home() {
               Saiba como a Lev foi criada, quais são os nossos valores, missão e
               visão!
             </p>
-            <button>Quero conhecer</button>
+            <a className={button}>Quero conhecer</a>
           </section>
         </div>
       </section>
@@ -98,6 +101,9 @@ function Home() {
           {faq.map(({ question, answer }, key) => (
             <Faq key={key} question={question} answer={answer} />
           ))}
+          <Link to="/help">
+            <a className={button}>Ver mais</a>
+          </Link>
         </div>
       </section>
     </main>

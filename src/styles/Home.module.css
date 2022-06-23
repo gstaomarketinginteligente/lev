@@ -46,8 +46,7 @@
   margin-left: -4vw;
 }
 
-.firstSection .secondArticle button {
-  margin-top: 2rem;
+.firstSection .secondArticle .button {
   border: 2px solid var(--white);
   border-radius: 30px;
   background-color: transparent;
@@ -58,6 +57,15 @@
   font-weight: 400;
   font-size: 1.8rem;
   line-height: 150%;
+}
+
+.button {
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.firstSection .secondArticle .lowProfile {
+  margin-bottom: 2rem;
 }
 
 .slogan {
@@ -214,7 +222,7 @@
   gap: 2rem;
 }
 
-.thirdSection article div button {
+.thirdSection article div .button {
   background-color: transparent;
   border: 2px solid var(--white);
   border-radius: 30px;
@@ -226,7 +234,8 @@
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  background-image: url("../images/home/section3.jpg");
+  background-repeat: no-repeat;
+  background: url("../images/home/section3.jpg") center/cover;
   height: 70vh;
   max-height: 700px;
 }
@@ -255,7 +264,7 @@
 
 .fourthSection div {
   position: relative;
-  background-image: url("../images/home/section4.jpg");
+  background: url("../images/home/section4.jpg") center/cover no-repeat;
   width: 100vw;
   height: 70vh;
   max-height: 700px;
@@ -327,7 +336,7 @@
   color: var(--gray);
 }
 
-.fourthSectionCard button {
+.fourthSectionCard .button {
   position: relative;
   font-family: 'Ubuntu';
   font-style: normal;
@@ -341,7 +350,7 @@
   padding: 6px 32px;
 }
 
-.fourthSectionCard button::after {
+.fourthSectionCard .button::after {
   content: '';
   position: absolute;
   top: 1px;
@@ -355,6 +364,7 @@
 }
 
 .fifthSection {
+  height: 100vh;
   width: 100vw;
   padding: 0 15vw;
 }
@@ -373,6 +383,34 @@
           align-items: center;
   margin-top: 4vh;
   color: var(--orange);
+}
+
+.fifthSection .button {
+  position: relative;
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 150%;
+  color: var(--gray);
+  background-color: transparent;
+  border: 2px solid var(--gray);
+  border-radius: 30px;
+  padding: 6px 40px 6px 30px;
+  margin-top: 4rem;
+}
+
+.fifthSection .button::after {
+  content: '';
+  position: absolute;
+  top: 1px;
+  left: -2rem;
+  width: 100%;
+  background-repeat: no-repeat;
+  height: 100%;
+  background-position-y: center;
+  background-position-x: right;
+  background-image: url(../images/right-arrow.svg);
 }
 
 @media only screen and (max-width: 1366px) {
@@ -451,7 +489,8 @@
             flex-flow: column nowrap;
     width: 100%;
   }
-  .thirdSection article div button {
+  .thirdSection article div .button {
+    text-align: center;
     width: 100%;
   }
   .thirdSection h1 span {

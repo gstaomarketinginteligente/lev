@@ -13,7 +13,7 @@ function Header({ headerActive }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const logoClickHandler = () => {
-    navigate('/lev');
+    navigate('/');
   };
 
   useEffect(() => {
@@ -69,7 +69,7 @@ function Header({ headerActive }) {
           <Link to='/driver'>Motorista</Link>
           <Link to='/passenger'>Passageiro</Link>
           <Link to='/help'>Ajuda</Link>
-          <Link to='/lev' className={lev}>
+          <Link to='/driver' className={lev}>
             Quero ser motorista Lev
           </Link>
         </nav>
