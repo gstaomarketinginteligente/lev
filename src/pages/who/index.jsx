@@ -5,12 +5,13 @@ import timeline from "../../images/who/timeline.svg";
 import celularAzul from "../../images/who/celular-azul.png";
 import celularLaranja from "../../images/who/celular-laranja.png";
 import rightArrow from "../../images/who/right-arrow.svg";
-import { scrollTop } from '../../helpers/scrollHelper';
+import homem from "../../images/who/homem.png";
+import { scrollTop } from "../../helpers/scrollHelper";
 
 function Who() {
   useEffect(() => {
     scrollTop();
-  },[])
+  }, []);
 
   const {
     mainSection,
@@ -29,6 +30,8 @@ function Who() {
     levsetaMobile,
     sectionContainer,
     section3Content,
+    contentContainer,
+    imageContainer,
   } = styles;
 
   return (
@@ -41,21 +44,24 @@ function Who() {
 
       <section className={section2}>
         <div className={sectionContainer}>
-          <p className={section2Title}>
-            A Lev chegou ao Brasil para engrandecer o mercado de mobilidade
-            urbana.
-          </p>
-          <p>
-            Garantindo liberdade e segurança para nossos parceiros e clientes, o
-            objetivo da Lev é ouvir, valorizar e trabalhar com ética,
-            transparência e leveza com os parceiros Lev.
-          </p>
-          <p>
-            Com valores e taxas menores que seus concorrentes, a Lev Moby tem
-            uma visão de longo prazo, a qual busca centralizar o mercado
-            brasileiro de aplicativos de mobilidade urbana, sempre respeitando
-            os princípios éticos e valores do segmento
-          </p>
+          <div className={contentContainer}>
+            <p className={section2Title}>
+              A Lev chegou ao Brasil para engrandecer o mercado de mobilidade
+              urbana.
+            </p>
+            <p>
+              Garantindo liberdade e segurança para nossos parceiros e clientes,
+              o objetivo da Lev é ouvir, valorizar e trabalhar com ética,
+              transparência e leveza com os parceiros Lev.
+            </p>
+            <p>
+              Com valores e taxas menores que seus concorrentes, a Lev Moby tem
+              uma visão de longo prazo, a qual busca centralizar o mercado
+              brasileiro de aplicativos de mobilidade urbana, sempre respeitando
+              os princípios éticos e valores do segmento
+            </p>
+          </div>
+          <img src={homem} alt="homem" />
         </div>
       </section>
 
