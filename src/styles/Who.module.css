@@ -194,14 +194,13 @@
 @media (max-width: 810px) {
   .section2 {
     min-height: 100vh;
-    max-height: 115vh;
+    max-height: 150vh;
   }
 
   .section2 .sectionContainer {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 1.5fr;
     justify-items: center;
-    padding-top: 5vh;
   }
 
   .section2 .sectionContainer img {
@@ -295,19 +294,43 @@
   }
 }
 
+
 @media (max-width: 740px) {
   .section3 {
     min-height: 80vh;
     display: flex;
     padding: 15vw 5vw;
     background: url(../images/who/sec-3-background-mobile.jpg) center/cover
-      no-repeat;
+    no-repeat;
     justify-content: unset;
   }
   .section3Content {
     max-width: 100%;
   }
 }
+
+@media (max-width: 549px) {
+  .section2 .sectionContainer {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1.2fr;
+    justify-items: center;
+  }
+}
+
+@media (max-width: 491px) {
+  .section2 {
+    min-height: 100vh;
+    max-height: 150vh;
+    height: 110vh;
+  }
+
+  .section2 .sectionContainer {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+  }
+}
+
 
 @media (max-width: 462px) {
   .section3 h1 {
@@ -336,12 +359,12 @@
   .section4ContentWrapper p {
     font-size: 2.2rem;
   }
-
+  
   img.timelineimg {
     content: url("../images/who/timelinemobilesmall.svg");
     margin-top: 7rem;
   }
-
+  
   .section4Content {
     grid-template-columns: 30rem 0.7fr;
   }
@@ -358,10 +381,23 @@
   }
 }
 
+@media (max-width: 390px) {
+  .section2 {
+    min-height: 100vh;
+    max-height: 150vh;
+    height: 115vh;
+  }
+
+  .section2 .sectionContainer {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.9fr;
+    justify-items: center;
+  }
+}
+
 @media (max-width: 350px) {
   .section2 .sectionContainer {
-    grid-template-rows: 1fr 1fr;
-    padding-top: 20vh;
+    grid-template-rows: 1fr 0.8fr;
   }
 
   .section2 .sectionContainer .contentContainer {
@@ -370,5 +406,23 @@
 
   .section3 {
     min-height: 80vh;
+  }
+}
+
+@media (max-width: 338px) {
+  .section2 .sectionContainer {
+    grid-template-rows: 1fr 0.7fr;
+  }
+}
+
+@media (max-width: 306px) {
+  .section2 .sectionContainer {
+    grid-template-rows: 1fr 0.6fr;
+  }
+}
+
+@media (max-width: 296px) {
+  .section2 .sectionContainer {
+    grid-template-rows: 1fr 0.5fr;
   }
 }
