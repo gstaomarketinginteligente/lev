@@ -99,8 +99,12 @@
   max-width: 55%;
 }
 
+.section3 h1 {
+  font-size: 4.8rem;
+}
+
 .section3 p {
-  margin: 3rem 0;
+  margin: 3rem 0 4rem;
 }
 
 .section4 {
