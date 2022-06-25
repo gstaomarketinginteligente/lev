@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import styles from '../../styles/Help.module.css';
-import faq from '../../data/faq';
+// import faq from '../../data/faq';
 import Faq from '../../components/Faq';
 import Database from '../../firebase/firebase';
 import { scrollTop } from '../../helpers/scrollHelper';
@@ -17,6 +17,7 @@ function Help() {
 
   const [passangerFaq, setPassangerFaq] = useState([]);
   const [driverFaq, setDriverFaq] = useState([]);
+  const [generalFaq, setGeneralFaq] = useState([]);
   const [questionForm, setQuestionForm] = useState({
     name: '',
     email: '',
@@ -41,6 +42,7 @@ function Help() {
       }
       setDriverFaq(driverFaq);
       setPassangerFaq(passangerFaq);
+      setGeneralFaq(generalFaq);
     };
     fetchFaq();
   }, []);
@@ -74,13 +76,13 @@ function Help() {
         <h1>Perguntas Frequêntes</h1>
         <section>
           <h2>Geral.</h2>
-          {faq.map(({ question, answer }, key) => (
+          {generalFaq.map(({ question, answer }, key) => (
             <Faq key={key} question={question} answer={answer} />
           ))}
         </section>
         <section>
           <h2>Motorista.</h2>
-          {driverFaq.map(({ question, answer }, key) => (
+          {driverFaq.filter(({active}) => active).map(({ question, answer }, key) => (
             <Faq key={key} question={question} answer={answer} />
           ))}
         </section>

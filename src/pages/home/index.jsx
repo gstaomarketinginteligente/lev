@@ -75,10 +75,10 @@ function Home() {
           </p>
           <div>
             <Link to="/driver">
-              <a className={button}>Benefícios de Motorista</a>
+              <p className={button}>Benefícios de Motorista</p>
             </Link>
             <Link to="/passenger">
-              <a className={button}>Benefícios de Usuário</a>
+              <p className={button}>Benefícios de Usuário</p>
             </Link>
           </div>
         </article>
@@ -96,7 +96,7 @@ function Home() {
               visão!
             </p>
             <Link to="/who">
-              <a className={button}>Quero conhecer</a>
+              <p className={button}>Quero conhecer</p>
             </Link>
           </section>
         </div>
@@ -107,9 +107,9 @@ function Home() {
           {faq.map(({ question, answer }, key) => (
             <Faq key={key} question={question} answer={answer} />
           ))}
-          <Link to="/help">
+          {/* <Link to="/help">
             <a className={button}>Ver mais</a>
-          </Link>
+          </Link> */}
         </div>
       </section>
     </main>

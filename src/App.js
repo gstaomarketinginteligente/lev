@@ -8,6 +8,7 @@ import Help from './pages/help';
 import Driver from './pages/driver';
 import User from './pages/passenger';
 import Who from './pages/who';
+import Admin from './pages/admin/Admin';
 
 function App() {
   const [headerActive, setHeaderActive] = useState(false);
@@ -16,7 +17,7 @@ function App() {
     window.onscroll = function() {
       showHeader();
     };
-    navigate('/lev');
+    navigate('/');
   // eslint-disable-next-line react-hooks/exhaustive-deps
   } , []);
 
@@ -37,6 +38,7 @@ function App() {
         <Route path='/driver' element={ <Driver /> } />
         <Route path='/passenger' element={ <User /> } />
         <Route path='/who' element={ <Who /> } />
+        <Route path='/09g20nhf' element={<Admin header={setHeaderActive}/>} />
       </Routes>
       <Footer />
     </>

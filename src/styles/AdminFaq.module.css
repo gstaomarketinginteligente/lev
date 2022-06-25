@@ -1,0 +1,42 @@
+.container {
+  display: -ms-grid;
+  display: grid;
+  width: 80vw;
+  -ms-grid-columns: (1fr)[7];
+      grid-template-columns: repeat(7, 1fr);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: var(--bright-gray);
+  border-radius: 8px;
+}
+
+.container span {
+  font-size: 18px;
+}
+
+.container textarea {
+  border: 1px solid var(--gray);
+  border-radius: 4px;
+  padding: 8px 4px;
+  outline: none;
+  resize: none;
+}
+
+.container label {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  font-size: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+}
+/*# sourceMappingURL=AdminFaq.module.css.map */

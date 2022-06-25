@@ -1,6 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-import { getDatabase, ref, set, get, child } from 'firebase/database';
+import { getDatabase, ref, set, get, child, update } from 'firebase/database';
 
 const firebaseConfig = {
   apiKey: "AIzaSyDsWF9bfj4Q0m1U_bGqVujBZN0m2IGyTqA",
@@ -27,13 +27,13 @@ class Database {
   getFaq = async () => {
     const faq = await get(child(ref(this.database), 'faq'));
     return faq.val();
-  }
+  };
 
   getFaqSize = async () => {
     const faq = await get(child(ref(this.database), 'faq'));
 
     return faq.exists ? faq.size : 0;
-  }
+  };
 
   ask = async (author, authorEmail, question, type) => {
     const id = await this.getFaqSize() + 1; 
@@ -43,8 +43,16 @@ class Database {
       type,
       question,
       answer: '',
+      active: false, 
     });
-  }
+  };
+
+  edit = (id, question, answer, type, active, author, authorEmail) => {
+    const updatePosition = `faq/${id}`;
+    const updateObj = { [updatePosition]: {question, answer, type, active, author, authorEmail} };
+
+    update(ref(this.database), updateObj);
+  };
 
 }
 
