@@ -76,7 +76,7 @@ function Help() {
         <h1>Perguntas Frequêntes</h1>
         <section>
           <h2>Geral.</h2>
-          {generalFaq.map(({ question, answer }, key) => (
+          {generalFaq.filter(({active}) => active).map(({ question, answer }, key) => (
             <Faq key={key} question={question} answer={answer} />
           ))}
         </section>
@@ -88,7 +88,7 @@ function Help() {
         </section>
         <section>
           <h2>Usuário.</h2>
-          {passangerFaq.map(({ question, answer }, key) => (
+          {passangerFaq.filter(({active}) => active).map(({ question, answer }, key) => (
             <Faq key={key} question={question} answer={answer} />
           ))}
         </section>
