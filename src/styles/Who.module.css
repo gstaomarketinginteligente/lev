@@ -29,7 +29,7 @@
 }
 
 .mainSection {
-  min-height: 70vh;
+  min-height: 80vh;
   padding: 5rem 5vw;
   background: url(../images/who/background.jpg) center/cover;
   display: -webkit-box;
