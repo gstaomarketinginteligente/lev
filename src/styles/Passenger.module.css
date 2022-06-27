@@ -20,7 +20,7 @@
 }
 
 .sectionMain {
-  background: url(../images/blueBg.svg);
+  background: url(../images/blueBg.svg) center/cover no-repeat;
   color: white;
   display: -ms-grid;
   display: grid;
