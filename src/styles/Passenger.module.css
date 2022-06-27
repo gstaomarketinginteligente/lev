@@ -1,6 +1,8 @@
 .sectionMain {
-  height: 80vh;
+  height: 100vh;
+  width: 100vw;
   padding: 0 15vw;
+  position: relative;
 }
 
 .sectionMain h1 {
@@ -17,11 +19,8 @@
   font-size: 2.4rem;
 }
 
-
 .sectionMain {
-  background: -webkit-gradient(linear, left top, left bottom, from(#2dc6ea), to(#2ba9c8));
-  background: linear-gradient(180deg, #2dc6ea 0%, #2ba9c8 100%);
-  mix-blend-mode: lighten;
+  background: url(../images/blueBg.svg);
   color: white;
   display: -ms-grid;
   display: grid;
@@ -59,12 +58,19 @@
   flex-wrap: nowrap;
 }
 
-.storeButtons a, .storeButtons img {
+.storeButtons a,
+.storeButtons img {
   width: 18.3rem;
 }
 
 .storeButtons a:first-child {
   margin-right: 2rem;
+}
+
+img.bottomIcon {
+  position: absolute;
+  bottom: -2px;
+  width: 18.7rem;
 }
 
 .sectionCards {
@@ -77,9 +83,9 @@
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr);
-      grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   -ms-grid-rows: 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   margin-bottom: 10vh;
 }
 
@@ -89,11 +95,11 @@
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin: 10rem 5rem 5vh;
 }
 
@@ -171,6 +177,10 @@
     width: 55rem;
   }
 
+  img.bottomIcon {
+    width: 18.7rem;
+  }
+
   .sectionMain h1 ~ p {
     font-size: 3.2rem;
   }
@@ -201,6 +211,10 @@
 
   .sectionMain > img {
     width: 75rem;
+  }
+
+  img.bottomIcon {
+    width: 18.7rem;
   }
 }
 

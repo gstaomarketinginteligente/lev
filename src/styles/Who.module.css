@@ -31,7 +31,14 @@
 .mainSection {
   min-height: 80vh;
   padding: 5rem 5vw;
-  background: url(../images/who/background.jpg) center/cover;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.322),
+      rgba(117, 19, 93, 0)
+    ),
+    url(../images/who/background.jpg);
+  background-size: cover;
+  background-position: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -298,18 +305,23 @@
   }
 }
 
-
 @media (max-width: 740px) {
   .section3 {
     min-height: 80vh;
     display: flex;
     padding: 15vw 5vw;
     background: url(../images/who/sec-3-background-mobile.jpg) center/cover
-    no-repeat;
+      no-repeat;
     justify-content: unset;
   }
   .section3Content {
     max-width: 100%;
+  }
+}
+
+@media (max-width: 740px) {
+  .mainSection {
+    background-position: 60%;
   }
 }
 
@@ -334,7 +346,6 @@
     justify-items: center;
   }
 }
-
 
 @media (max-width: 462px) {
   .section3 h1 {
@@ -363,12 +374,12 @@
   .section4ContentWrapper p {
     font-size: 2.2rem;
   }
-  
+
   img.timelineimg {
     content: url("../images/who/timelinemobilesmall.svg");
     margin-top: 7rem;
   }
-  
+
   .section4Content {
     grid-template-columns: 30rem 0.7fr;
   }
@@ -386,6 +397,10 @@
 }
 
 @media (max-width: 390px) {
+  .mainSection {
+    background-position: 65%;
+  }
+
   .section2 {
     min-height: 100vh;
     max-height: 150vh;

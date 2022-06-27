@@ -6,6 +6,8 @@
   background-size: cover;
   display: -ms-grid;
   display: grid;
+  position: relative;
+  justify-items: center;
   -ms-grid-columns: 39vw 33vw;
       grid-template-columns: 39vw 33vw;
   -ms-grid-rows: 100%;
@@ -73,10 +75,7 @@
 
 .tip {
   position: absolute;
-  top: 97%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  bottom: -2px;
 }
 
 .benefitsTitle {

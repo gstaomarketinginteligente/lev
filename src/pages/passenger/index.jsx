@@ -7,6 +7,7 @@ import vLev from '../../images/passenger/cards-icons/vLev.svg';
 import { benefits } from '../../data/benefits';
 import CardsContainer from '../../components/CardsContainer';
 import { scrollTop } from '../../helpers/scrollHelper';
+import pontinha from '../../images/home/pontinha.svg';
 
 function Passenger() {
   const {
@@ -15,7 +16,8 @@ function Passenger() {
     storeButtons,
     sectionCards,
     secCardsTitle,
-    highText
+    highText,
+    bottomIcon
   } = styles;
 
   const [isMobile, setIsMobile] = useState(false);
@@ -63,6 +65,7 @@ function Passenger() {
           </div>
         </div>
         <img src={car} alt="carro lev" />
+        <img src={pontinha} className={bottomIcon} alt="logo lev" />
       </section>
 
       <div className={secCardsTitle}>
