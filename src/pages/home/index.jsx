@@ -107,9 +107,9 @@ function Home() {
           {faq.map(({ question, answer }, key) => (
             <Faq key={key} question={question} answer={answer} />
           ))}
-          {/* <Link to="/help">
+          <Link to="/help">
             <a className={button}>Ver mais</a>
-          </Link> */}
+          </Link>
         </div>
       </section>
     </main>

@@ -19,7 +19,6 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  pointer-events: none;
 }
 
 .questionContainer h3 {
@@ -58,8 +57,9 @@
 }
 
 .answerContainer.active p {
+  white-space: pre-line;
   color: var(--gray);
-  max-height: 12rem;
+  max-height: 50rem;
   -webkit-user-select: all;
      -moz-user-select: all;
       -ms-user-select: all;
