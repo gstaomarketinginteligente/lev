@@ -131,6 +131,7 @@ function Help() {
           >
             <option value={'passenger'}>Passageiro</option>
             <option value={'driver'}>Motorista</option>
+            <option value={'general'}>Geral</option>
           </select>
           <button type='submit' onClick={questionHandler}>
             Enviar

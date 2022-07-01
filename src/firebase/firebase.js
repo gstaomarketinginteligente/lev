@@ -3,14 +3,14 @@ import { getAnalytics } from "firebase/analytics";
 import { getDatabase, ref, set, get, child, update } from 'firebase/database';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDsWF9bfj4Q0m1U_bGqVujBZN0m2IGyTqA",
-  authDomain: "levweb-ed212.firebaseapp.com",
-  databaseURL: "https://levweb-ed212-default-rtdb.firebaseio.com",
-  projectId: "levweb-ed212",
-  storageBucket: "levweb-ed212.appspot.com",
-  messagingSenderId: "231643766080",
-  appId: "1:231643766080:web:0d18f08e6eac8287aaeea5",
-  measurementId: "G-E5J799N7GD"
+  apiKey: "AIzaSyBLTIOSxyrss-GjUnKSFtczcdVlBDPPrQg",
+  authDomain: "faq-lev.firebaseapp.com",
+  databaseURL: "https://faq-lev-default-rtdb.firebaseio.com",
+  projectId: "faq-lev",
+  storageBucket: "faq-lev.appspot.com",
+  messagingSenderId: "451871842731",
+  appId: "1:451871842731:web:763ff1e90229c3d16472ee",
+  measurementId: "G-GV7V30QSG0"
 };
 
 class Database {
