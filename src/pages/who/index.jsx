@@ -7,6 +7,7 @@ import celularLaranja from "../../images/who/celular-laranja.png";
 import rightArrow from "../../images/who/right-arrow.svg";
 import homem from "../../images/who/homem.png";
 import { scrollTop } from "../../helpers/scrollHelper";
+import { Link } from 'react-router-dom';
 
 function Who() {
   useEffect(() => {
@@ -31,7 +32,6 @@ function Who() {
     sectionContainer,
     section3Content,
     contentContainer,
-    imageContainer,
   } = styles;
 
   return (
@@ -75,9 +75,9 @@ function Who() {
               negócio para quem almeja aumentar seus ganhos ou ter seu próprio
               negócio.
             </p>
-            <a href="#" className={button}>
+            <Link to="/driver" className={button}>
               Saiba mais <img src={rightArrow} alt="seta direita" />
-            </a>
+            </Link>
           </div>
         </div>
       </section>

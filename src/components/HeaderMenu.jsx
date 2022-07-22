@@ -18,7 +18,7 @@ function HeaderMenu({ lev, setIsMenuOpen, open }) {
         <Link onClick={closeMenu} to='/driver'>Motorista</Link>
         <Link onClick={closeMenu} to='/passenger'>Passageiro</Link>
         <Link onClick={closeMenu} to='/who'>Quem somos</Link>
-        {/* <Link onClick={closeMenu} to='/help'>Ajuda</Link> */}
+        <Link onClick={closeMenu} to='/help'>Ajuda</Link>
         <Link onClick={closeMenu} to='/lev' className={ `${lev} ${levMobile}` }>
           Quero ser motorista Lev
         </Link>

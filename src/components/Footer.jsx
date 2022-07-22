@@ -1,8 +1,11 @@
 import React from "react";
+// import { Link } from 'react-router-dom';
 import styles from "../styles/Footer.module.css";
 import logoFooter from "../images/logo-footer.svg";
 import appstoreImg from "../images/appstore.svg";
 import googleplayImg from "../images/googleplay.svg";
+import { HashLink as Link } from 'react-router-hash-link';
+
 
 function Footer() {
   const {
@@ -19,21 +22,25 @@ function Footer() {
         <img src={logoFooter} className={footerLogo} alt="Lev footer" />
         <div>
           <p className={footerSectionTitle}>Contatos</p>
-          <p>Ajuda</p>
+          <p><Link to="/help">Ajuda</Link></p>
           <a href="mailto:contato.lev@gmail.com">contato.lev@gmail.com</a>
         </div>
         <div>
           <p className={footerSectionTitle}>Baixe o app agora!</p>
           <div className={storeSection}>
-            <img src={appstoreImg} alt="appstore" />
-            <img src={googleplayImg} alt="googleplay" />
+            <a target="_blank" href="https://apps.apple.com/br/app/moby-app-motorista/id1483734161">
+              <img src={appstoreImg} alt="appstore" />
+            </a>
+            <a target="_blank" href="https://play.google.com/store/apps/details?id=mobyapp.motorista&hl=en_US&gl=US">
+              <img src={googleplayImg} alt="googleplay" />
+            </a>
           </div>
         </div>
         <div>
           <p className={footerSectionTitle}>Seja motorista Lev!</p>
-          <a className={lev} href="#">
+          <Link to="/driver#form" className={lev}>
             Quero ser motorista lev
-          </a>
+          </Link>
         </div>
         <div>
           <p>Termos de Uso e Privacidade</p>
@@ -45,9 +52,15 @@ function Footer() {
           <p className={footerSectionTitle}>
             Acompanhe a Lev nas redes sociais
           </p>
-          <i className="bi bi-facebook"></i>
-          <i className="bi bi-instagram"></i>
-          <i className="bi bi-linkedin"></i>
+          <a target="_blank" href="https://www.facebook.com/levmoby">
+            <i className="bi bi-facebook"></i>
+          </a>
+          <a target="_blank" href="https://www.instagram.com/levmoby/">
+            <i className="bi bi-instagram"></i>
+          </a>
+          <a target="_blank" href="https://www.linkedin.com/company/levmoby/">
+            <i className="bi bi-linkedin"></i>
+          </a>
         </div>
       </div>
     </footer>

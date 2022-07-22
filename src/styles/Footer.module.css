@@ -44,7 +44,7 @@ footer .sectionContainer div i:hover {
   color: var(--orange);
 }
 
-footer .sectionContainer div i:not(:last-child) {
+footer .sectionContainer div a:not(:last-child) {
   margin-right: 3rem;
 }
 
@@ -68,7 +68,7 @@ footer .sectionContainer div i:not(:last-child) {
   cursor: pointer;
 }
 
-.storeSection img:not(:last-child) {
+.storeSection a:not(:last-child) {
   margin-bottom: 2rem;
 }
 

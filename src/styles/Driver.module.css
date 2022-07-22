@@ -1,3 +1,18 @@
+/* .lev {
+  border: 0.2rem solid var(--white);
+  border-radius: 3rem;
+  padding: 0.8rem 3.2rem;
+  font-size: 2rem;
+  font-weight: 600;
+  color: white;
+  transition: 0.2s;
+}
+
+.lev:hover {
+  color: var(--orange);
+  background-color: white;
+} */
+
 .container .mainContent {
   width: 100vw;
   height: 100vh;
@@ -9,18 +24,18 @@
   position: relative;
   justify-items: center;
   -ms-grid-columns: 39vw 33vw;
-      grid-template-columns: 39vw 33vw;
+  grid-template-columns: 39vw 33vw;
   -ms-grid-rows: 100%;
-      grid-template-rows: 100%;
+  grid-template-rows: 100%;
   -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
 }
 
 .container .mainContent article {
   -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  -ms-grid-row-align: center;
+  align-self: center;
   z-index: 100;
 }
 
@@ -50,9 +65,10 @@
   line-height: 130%;
   letter-spacing: 0.05em;
   color: var(--white);
+  margin-bottom: 2rem;
 }
 
-.container .mainContent article button {
+.container .mainContent article a {
   font-weight: 700;
   font-size: 1.8rem;
   line-height: 150%;
@@ -66,11 +82,17 @@
   cursor: pointer;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+
 }
 
-.container .mainContent article button:active {
-  -webkit-transform: scale(0.97);
-          transform: scale(0.97);
+.container .mainContent article a:hover {
+    color: var(--orange);
+    background-color: white;
+}
+
+.container .mainContent article a:active {
+  -webkit-transform: scale(0.7);
+  transform: scale(0.7);
 }
 
 .tip {
@@ -84,14 +106,14 @@
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin-top: 10vh;
   margin-bottom: 5vh;
 }
@@ -141,7 +163,7 @@
   right: 0;
   bottom: 0;
   -webkit-clip-path: polygon(100% 0, 100% 80%, 50% 100%, 0 80%, 0 0);
-          clip-path: polygon(100% 0, 100% 80%, 50% 100%, 0 80%, 0 0);
+  clip-path: polygon(100% 0, 100% 80%, 50% 100%, 0 80%, 0 0);
   background-image: url(../images/driver/frame.jpg);
   background-size: cover;
 }
@@ -177,7 +199,7 @@
 .letterSection img {
   position: absolute;
   -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   top: 100%;
   left: 50%;
   z-index: 5;
@@ -200,14 +222,14 @@
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin-bottom: 5rem;
 }
 
@@ -235,7 +257,7 @@
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 50% 50%;
-      grid-template-columns: 50% 50%;
+  grid-template-columns: 50% 50%;
   background: -webkit-gradient(linear, left top, left bottom, from(#ff8f29), to(#e46d00));
   background: linear-gradient(180deg, #ff8f29 0%, #e46d00 100%);
   gap: 2rem;
@@ -248,8 +270,8 @@
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
 }
 
 .signinSection article h1 {
@@ -274,14 +296,14 @@
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   gap: 1rem;
 }
 
@@ -309,66 +331,78 @@
   .container .mainContent {
     position: relative;
     -ms-grid-columns: 100vw;
-        grid-template-columns: 100vw;
+    grid-template-columns: 100vw;
     -ms-grid-rows: 60% 40%;
-        grid-template-rows: 60% 40%;
+    grid-template-rows: 60% 40%;
     padding: 10vw 5vw 0 5vw;
     padding-bottom: 20vh;
     -webkit-box-sizing: content-box;
-            box-sizing: content-box;
+    box-sizing: content-box;
     width: 90vw;
   }
+
   .container .mainContent article {
     width: 90vw;
   }
+
   .container .mainContent article h1 {
     font-size: 3.8rem;
     line-height: 4.5rem;
   }
+
   .container .mainContent .personS {
     -ms-grid-row: 1;
     grid-row: 1;
     margin-bottom: -8vh;
     width: 90%;
     -ms-grid-column-align: center;
-        justify-self: center;
+    justify-self: center;
     max-width: 50rem;
   }
+
   .tip {
     position: absolute;
     top: 97%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
   }
+
   .letterSection {
     padding: 20vh 8vw 30vh 8vw;
   }
+
   .letterSection::before {
     background-image: url(../images/driver/frameMobile.jpg);
     -webkit-clip-path: polygon(100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);
-            clip-path: polygon(100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);
+    clip-path: polygon(100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);
   }
+
   .letterSection h1 {
     font-size: 3rem;
     line-height: 4rem;
   }
+
   .calculatorSection {
     padding: 40vh 5vw 10vh;
   }
+
   .calculatorSection .head h1 {
     font-size: 3rem;
     line-height: 4rem;
   }
+
   .calculatorSection .head p {
     font-size: 2rem;
     line-height: 3rem;
   }
+
   .signinSection {
     -ms-grid-columns: 100%;
-        grid-template-columns: 100%;
+    grid-template-columns: 100%;
     -ms-grid-rows: 60% 40%;
-        grid-template-rows: 60% 40%;
+    grid-template-rows: 60% 40%;
   }
 }
+
 /*# sourceMappingURL=Driver.module.css.map */

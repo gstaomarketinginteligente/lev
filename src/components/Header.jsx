@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import logo from '../images/logo.svg';
 import logoLight from '../images/logo-light.svg';
 import styles from '../styles/Header.module.css';
 import HeaderMenu from './HeaderMenu';
 import { disableScroll } from '../helpers/scrollHelper';
+import { HashLink as Link } from 'react-router-hash-link';
+
 
 function Header({ headerActive }) {
   const { container, lev, active, menu } = styles;
@@ -69,7 +71,7 @@ function Header({ headerActive }) {
           <Link to='/driver'>Motorista</Link>
           <Link to='/passenger'>Passageiro</Link>
           <Link to='/help'>Ajuda</Link>
-          <Link to='/driver' className={lev}>
+          <Link to='/driver#form' className={lev}>
             Quero ser motorista Lev
           </Link>
         </nav>
